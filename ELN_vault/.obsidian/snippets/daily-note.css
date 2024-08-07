@@ -1,0 +1,502 @@
+/*
+ * ========================================================
+ * Format Obsidian ELN Daily Note
+ * ========================================================
+ */
+
+/* @settings
+name: Daily Note Snippet
+id: daily-note-snippet
+settings:
+
+# Colors
+
+    - 
+        id: daily-note-colors
+        title: Format daily-note colors
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: daily-note-card-bg-color
+        title: Color of daily-note cards
+        type: variable-themed-color
+        default-light: '#'
+        default-dark: '#'
+        format: 'rgb-values'
+    -
+        id: daily-note-h3-color
+        title: Color of H3 heading (Card title)
+        type: class-select
+        allowEmpty: true
+        default: daily-note-h3-mauve
+        options:
+            - 
+                label: Rosewater
+                value: daily-note-h3-rosewater
+            - 
+                label: Flamingo
+                value: daily-note-h3-flamingo
+            - 
+                label: Pink
+                value: daily-note-h3-pink
+            - 
+                label: Mauve
+                value: daily-note-h3-mauve
+            - 
+                label: Red
+                value: daily-note-h3-red
+            - 
+                label: Maroon
+                value: daily-note-h3-maroon
+            - 
+                label: Peach
+                value: daily-note-h3-peach
+            - 
+                label: Yellow
+                value: daily-note-h3-yellow
+            - 
+                label: Green
+                value: daily-note-h3-green
+            - 
+                label: Teal
+                value: daily-note-h3-teal
+            - 
+                label: Sky
+                value: daily-note-h3-sky
+            - 
+                label: Sapphire
+                value: daily-note-h3-sapphire
+            - 
+                label: Blue
+                value: daily-note-h3-blue
+            - 
+                label: Lavender
+                value: daily-note-h3-lavender
+    -
+        id: daily-note-bold-color
+        title: Color of bold text
+        type: class-select
+        allowEmpty: true
+        default: daily-note-bold-pink
+        options:
+            - 
+                label: Rosewater
+                value: daily-note-bold-rosewater
+            - 
+                label: Flamingo
+                value: daily-note-bold-flamingo
+            - 
+                label: Pink
+                value: daily-note-bold-pink
+            - 
+                label: Mauve
+                value: daily-note-bold-mauve
+            - 
+                label: Red
+                value: daily-note-bold-red
+            - 
+                label: Maroon
+                value: daily-note-bold-maroon
+            - 
+                label: Peach
+                value: daily-note-bold-peach
+            - 
+                label: Yellow
+                value: daily-note-bold-yellow
+            - 
+                label: Green
+                value: daily-note-bold-green
+            - 
+                label: Teal
+                value: daily-note-bold-teal
+            - 
+                label: Sky
+                value: daily-note-bold-sky
+            - 
+                label: Sapphire
+                value: daily-note-bold-sapphire
+            - 
+                label: Blue
+                value: daily-note-bold-blue
+            - 
+                label: Lavender
+                value: daily-note-bold-lavender
+*/
+
+.theme-light {
+    --daily-note-card-bg-color: var(--titlebar-background);
+    --daily-note-nav-button: var(--titlebar-background);
+}
+
+.theme-dark {
+    --daily-note-card-bg-color: var(--titlebar-background);
+}
+
+.daily-note-bold-rosewater{
+    --daily-note-bold-color: var(--ctp-rosewater, var(--ctp-ext-rosewater, 222, 149, 132));
+}
+
+.daily-note-h3-rosewater {
+    --daily-note-h3-color: var(--ctp-rosewater, var(--ctp-ext-rosewater, 222, 149, 132));
+}
+
+.daily-note-bold-flamingo {
+    --daily-note-bold-color: var(--ctp-flamingo, var(--ctp-ext-flamingo, 221, 120, 120));
+}
+
+.daily-note-h3-flamingo {
+    --daily-note-h3-color: var(--ctp-flamingo, var(--ctp-ext-flamingo, 221, 120, 120));
+}
+
+.daily-note-bold-pink {
+    --daily-note-bold-color: var(--ctp-pink, var(--ctp-ext-pink, 236, 131, 208));
+}
+
+.daily-note-h3-pink {
+    --daily-note-h3-color: var(--ctp-pink, var(--ctp-ext-pink, 236, 131, 208));
+}
+
+.daily-note-bold-mauve {
+    --daily-note-bold-color: var(--ctp-mauve, var(--ctp-ext-mauve, 203, 166, 247));
+}
+
+.daily-note-h3-mauve {
+    --daily-note-h3-color: var(--ctp-mauve, var(--ctp-ext-mauve, 203, 166, 247));
+}
+
+.daily-note-bold-red {
+    --daily-note-bold-color: var(--ctp-red, var(--ctp-ext-red, 210, 15, 57));
+}
+
+.daily-note-h3-red {
+    --daily-note-h3-color: var(--ctp-red, var(--ctp-ext-red, 210, 15, 57));
+}
+
+.daily-note-bold-maroon {
+    --daily-note-bold-color: var(--ctp-maroon, var(--ctp-ext-maroon, 230, 69, 83));
+}
+
+.daily-note-h3-maroon {
+    --daily-note-h3-color: var(--ctp-maroon, var(--ctp-ext-maroon, 230, 69, 83));
+}
+
+.daily-note-bold-peach {
+    --daily-note-bold-color: var(--ctp-peach, var(--ctp-ext-peach, 254, 100, 11));
+}
+
+.daily-note-h3-peach {
+    --daily-note-h3-color: var(--ctp-peach, var(--ctp-ext-peach, 254, 100, 11));
+}
+
+.daily-note-bold-yellow {
+    --daily-note-bold-color: var(--ctp-yellow, var(--ctp-ext-yellow, 228, 147, 32));
+}
+
+.daily-note-h3-yellow {
+    --daily-note-h3-color: var(--ctp-yellow, var(--ctp-ext-yellow, 228, 147, 32));
+}
+
+.daily-note-bold-green {
+    --daily-note-bold-color: var(--ctp-green, var(--ctp-ext-green, 64, 160, 43));
+}
+
+.daily-note-h3-green {
+    --daily-note-h3-color: var(--ctp-green, var(--ctp-ext-green, 64, 160, 43));
+}
+
+.daily-note-bold-teal {
+    --daily-note-bold-color: var(--ctp-teal, var(--ctp-ext-teal, 23, 146, 153));
+}
+
+.daily-note-h3-teal {
+    --daily-note-h3-color: var(--ctp-teal, var(--ctp-ext-teal, 23, 146, 153));
+}
+
+.daily-note-bold-sky {
+    --daily-note-bold-color: var(--ctp-sky, var(--ctp-ext-sky, 4, 165, 229));
+}
+
+.daily-note-h3-sky {
+    --daily-note-h3-color: var(--ctp-sky, var(--ctp-ext-sky, 4, 165, 229));
+}
+
+.daily-note-bold-sapphire {
+    --daily-note-bold-color: var(--ctp-sapphire, var(--ctp-ext-sapphire, 32, 159, 181));
+}
+
+.daily-note-h3-sapphire {
+    --daily-note-h3-color: var(--ctp-sapphire, var(--ctp-ext-sapphire, 32, 159, 181));
+}
+
+.daily-note-bold-blue {
+    --daily-note-bold-color: var(--ctp-blue, var(--ctp-ext-blue, 42, 110, 245));
+}
+
+.daily-note-h3-blue {
+    --daily-note-h3-color: var(--ctp-blue, var(--ctp-ext-blue, 42, 110, 245));
+}
+
+.daily-note-bold-lavender {
+    --daily-note-bold-color: var(--ctp-lavender, var(--ctp-ext-lavender, 114, 135, 253));
+}
+
+.daily-note-h3-lavender {
+    --daily-note-h3-color: var(--ctp-lavender, var(--ctp-ext-lavender, 114, 135, 253));
+}
+
+.daily-note-nav-container {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: left;
+    align-items: left;
+    margin-bottom: 10px;
+}
+
+.daily-note-nav-button {
+    background-color: var(--daily-note-nav-button);
+    border-radius: var(--button-radius);
+    padding: 5px 25px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+/* 
+.daily-note-nav-previous > a {
+    color: var(--text-on-accent) !important;
+}
+.daily-note-nav-next > a {
+    color: var(--text-on-accent) !important;
+} */
+
+
+.daily-note .markdown-preview-sizer.markdown-preview-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.daily-note .markdown-preview-pusher {
+    order: -1;
+}
+
+.daily-note .el-pre.obsidian-banner-wrapper {
+    order: -1;
+}
+
+.daily-note .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+    width: 55rem;
+}
+
+.daily-note {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    padding-top: 20px !important;
+}
+
+.daily-note .markdown-preview-section {
+    max-width: 100%;
+}
+
+/* Title at top of the document */
+.daily-note .markdown-preview-section .title {
+    top: 60px;
+    position: absolute;
+    font-size: 30pt !important;
+    font-weight: 900;
+    text-shadow: 2px 2px 7px #83a4b9;
+    letter-spacing: 8px;
+}
+
+.daily-note h1,
+.daily-note div.HyperMD-header.HyperMD-header-1 {
+    border-bottom-style: solid !important;
+    border-width: 1px !important;
+    border-color: lightgrey;
+    padding-bottom: 3px !important;
+    font-size: 18pt;
+}
+
+.daily-note h2 {
+    padding-bottom: 3px !important;
+    font-size: 16pt;
+}
+
+.daily-note h3,
+.daily-note .cm-header.cm-header-3 {
+    padding-bottom: 3px !important;
+    font-size: 13pt;
+    color: rgb(var(--daily-note-h3-color));
+}
+
+.daily-note .cm-header.cm-header-3 {
+    padding-bottom: 3px !important;
+    font-size: 1.5rem;
+    color: rgb(var(--daily-note-h3-color));
+}
+
+.daily-note h3 > a {
+    color: rgb(var(--daily-note-h3-color)) !important;
+}
+
+.daily-note strong {
+    color: rgb(var(--daily-note-bold-color));
+}
+
+ 
+.daily-note div.el-ul>ul>li>span.list-bullet::after {
+    visibility: hidden;
+}
+
+/* 
+.daily-note div.el-ul > ul {
+    display: flex;
+    column-gap: 0px;
+    flex-flow: row wrap; */
+    /* background-color: #F9F9F9; */
+/* } */
+
+.daily-note div.el-ul>ul {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+}
+
+/* hide marker of top level list */
+.daily-note div.el-ul>ul>li>div.list-bullet::after {
+    visibility: hidden;
+}
+
+.daily-note div > ul > li {
+    width: 100%-20px;
+    margin-bottom: 20px;
+    padding: 8px;
+    background-color: var(--daily-note-card-bg-color);
+    border-radius: 5px;
+    /* box-shadow: 0 20px 30px rgba(0, 0, 0, .4); */
+}
+
+.daily-note .task-list-item {
+    width: auto !important;
+}
+
+ul.contains-task-list.plugin-tasks-query-result {
+    row-gap: normal;
+}
+
+/* uncomment to hide list bullets of dataview querry */
+/*
+.daily-note ul.dataview.list-view-ul {
+    padding-left: 5px;
+    min-width: 100px;
+    width: 100%;
+} 
+*/
+
+.daily-note ul.dataview.list-view-ul {
+    padding-left: 0rem;
+}
+
+.daily-note ul.dataview.list-view-ul > li {
+    min-width: 100px;
+    width: 100%-20px;
+    margin-bottom: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 0.3rem;
+}
+
+/* .daily-note .el-lang-dataviewjs.el-div > div.block-language-dataviewjs.node-insert-event > div {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    padding-left: 32px;
+    column-gap: 35px;
+    flex-flow: column wrap;
+    height: 330px;
+    width: 100%;
+} */
+
+.daily-note .el-lang-dataviewjs.el-div>div.block-language-dataviewjs.node-insert-event>div>h4 {
+    display: flex;
+    align-items: flex-end;
+    align-self: flex-start;
+    margin-top: 3px;
+    margin-bottom: 7px;
+    width: 30%;
+    flex: 0 0 50px;
+}
+
+.daily-note .el-lang-dataviewjs.el-div>div.block-language-dataviewjs.node-insert-event>div>div.dataview.result-group {
+    width: 31%;
+    overflow-y: scroll;
+    align-self: flex-start;
+    flex: 1 1 250px;
+    background-color: var(--daily-note-card-bg-color);
+    border-radius: 5px;
+}
+
+.daily-note .el-lang-dataviewjs.el-div>div.block-language-dataviewjs.node-insert-event>div>div.dataview.result-group>ul>li.dataview.task-list-item {
+    width: 100%-20px !important;
+    padding-bottom: 3px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.daily-note .markdown-rendered div.motivation-img-container {
+    background-color: var(--daily-note-card-bg-color);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.daily-note .markdown-rendered img.motivation-img {
+    width: 50%;
+}
+
+.daily-note .markdown-rendered div.progress-container {
+    background-color: var(--daily-note-card-bg-color);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.daily-note div.HyperMD-list-line.HyperMD-list-line-1 {
+    background-color: var(--daily-note-card-bg-color);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-top: 1rem;
+}
+
+.daily-note div.HyperMD-list-line.HyperMD-list-line-2 {
+    background-color: var(--daily-note-card-bg-color);
+}
+
+.daily-note div.HyperMD-list-line.HyperMD-list-line-2:has(+div.cm-line>br) {
+    background-color: var(--daily-note-card-bg-color);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-bottom: 1rem;
+}
+
+.daily-note div.HyperMD-list-line.HyperMD-list-line-1+div.cm-preview-code-block.cm-embed-block.markdown-rendered {
+    background-color: var(--daily-note-card-bg-color);
+}
+
+.daily-note div.HyperMD-list-line.HyperMD-list-line-1+div.cm-preview-code-block.cm-embed-block.markdown-rendered:has(+div.cm-line>br) {
+    background-color: var(--daily-note-card-bg-color);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-bottom: 1rem;
+}
+
+.daily-note div.HyperMD-list-line.HyperMD-list-line-2+div.cm-preview-code-block.cm-embed-block.markdown-rendered {
+    background-color: var(--daily-note-card-bg-color);
+}
+
+.daily-note div.HyperMD-list-line.HyperMD-list-line-2+div.cm-preview-code-block.cm-embed-block.markdown-rendered:has(+div.cm-line>br) {
+    background-color: var(--daily-note-card-bg-color);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-bottom: 1rem;
+}

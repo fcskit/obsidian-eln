@@ -1,0 +1,409 @@
+{
+  "settings": {
+    "migrated": 5,
+    "iconPacksPath": ".obsidian/plugins/obsidian-icon-folder/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "FasListCheck",
+      "FasListUl",
+      "FasFileCode",
+      "FasFilter",
+      "FasBinoculars"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [
+      {
+        "icon": "FasFileCode",
+        "rule": "assets/javascript/code library\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 0,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasFileCode",
+        "rule": "assets/javascript/templater\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 1,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasFileCode",
+        "rule": "assets/javascript/dataview\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 2,
+        "useFilePath": true
+      },
+      {
+        "icon": "RiFilePaper2Fill",
+        "rule": "Resources/Chemicals/separator\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 3,
+        "useFilePath": true
+      },
+      {
+        "icon": "RiFilePaper2Fill",
+        "rule": "Experiments/Samples/Demo Project No 2/electrode\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 4,
+        "useFilePath": true
+      },
+      {
+        "icon": "RiFilePaper2Fill",
+        "rule": "Resources/Chemicals/current collector\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 5,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasFileCode",
+        "rule": "assets/templater script functions\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 6,
+        "useFilePath": true
+      },
+      {
+        "icon": "RiKeynoteFill",
+        "rule": "Presentations\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 7,
+        "useFilePath": true
+      },
+      {
+        "icon": "RiInkBottleFill",
+        "rule": "Resources/Chemicals/solvent\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 8,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasFlask",
+        "rule": "Resources/Chemicals/electrolyte\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 9,
+        "useFilePath": true
+      },
+      {
+        "icon": "RiFlashlightFill",
+        "rule": "Resources/Chemicals/conductive additive\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 10,
+        "useFilePath": true
+      },
+      {
+        "icon": "RiCoinLine",
+        "rule": "Resources/Chemicals/metal\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 11,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasPlusMinus",
+        "rule": "Resources/Chemicals/active material\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 12,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasLink",
+        "rule": "Resources/Chemicals/binder\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 13,
+        "useFilePath": true
+      },
+      {
+        "icon": "RiBookmarkFill",
+        "rule": "Notes/Miscellaneous/Electrochemical Glossary\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 14,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasEyeDropper",
+        "rule": "Resources/Electrodes/Reference\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 15,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasFileCsv",
+        "rule": "assets/CSV\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 16,
+        "useFilePath": true
+      },
+      {
+        "icon": "RiQuestionnaireFill",
+        "rule": "Notes/HowTos\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 17,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasFileCode",
+        "rule": "assets/templates\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 18,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasChartLine",
+        "rule": "assets/graphs\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 19,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasFileImage",
+        "rule": "assets/images\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 20,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasFilePdf",
+        "rule": "assets/PDF\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 21,
+        "useFilePath": true
+      },
+      {
+        "icon": "RiArticleFill",
+        "rule": "Literature/Publications\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 22,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasBook",
+        "rule": "Literature/Books\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 23,
+        "useFilePath": true
+      },
+      {
+        "icon": "RiCommandFill",
+        "rule": "Projects\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 24,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasPeopleArrowsLeftRight",
+        "rule": "Meetings\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 25,
+        "useFilePath": true
+      },
+      {
+        "rule": "assets/javascript/dataview/views\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "icon": "FasFileCode",
+        "for": "everything",
+        "order": 26
+      },
+      {
+        "icon": "FasRoute",
+        "rule": "Experiments/Processes\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 27,
+        "useFilePath": true
+      },
+      {
+        "icon": "RiCoinFill",
+        "rule": "Experiments/Samples\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 28,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasMicroscope",
+        "rule": "Experiments/Analyses\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 29,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasAddressCard",
+        "rule": "Contacts\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 30,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasPenToSquare",
+        "rule": "Daily Notes\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 31,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasToiletPaper",
+        "rule": "Resources/Electrodes/Standard\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 32,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasBuilding",
+        "rule": "Resources/Labs\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 33,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasMicroscope",
+        "rule": "Resources/Instruments\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 34,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasFilter",
+        "rule": "Resources/Devices\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 35,
+        "useFilePath": true
+      },
+      {
+        "icon": "RiBattery2ChargeFill",
+        "rule": "Resources/Cells\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 36,
+        "useFilePath": true
+      },
+      {
+        "icon": "FasListCheck",
+        "rule": "Tasks\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 37,
+        "useFilePath": true
+      },
+      {
+        "rule": "electrochemical cell",
+        "icon": "FasCarBattery",
+        "for": "everything",
+        "order": 38
+      },
+      {
+        "rule": "electrode",
+        "icon": "RiFilePaper2Fill",
+        "for": "everything",
+        "order": 39
+      },
+      {
+        "rule": "Project",
+        "icon": "RiCommandFill",
+        "for": "everything",
+        "order": 40
+      }
+    ],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": true,
+    "iconInTitleEnabled": false,
+    "iconInFrontmatterEnabled": false,
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": false,
+    "iconIdentifier": ":",
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsInLinksEnabled": false,
+    "debugMode": false
+  },
+  "Resources": "FasCubes",
+  "Resources/Chemicals": "FasFlask",
+  "Resources/Electrodes": "FasToiletPaper",
+  "Home.md": "FasHouseChimney",
+  "Experiments": "FasAtom",
+  "Lists": "FasList",
+  "assets/images/Devices": "FasFilter",
+  "assets/images/Instruments": "FasMicroscope",
+  "assets/images/Banner": "FasImages",
+  "assets": "RiStackLine",
+  "Lists/Contacts.md": "FasAddressBook",
+  "Lists/Daily Notes.md": "FasPenToSquare",
+  "Notes/H & P Statements.md": "FasSkullCrossbones",
+  "assets/ELN Settings.md": "FasGear",
+  "assets/Sample Types.md": "FasGear",
+  "assets/images/People": "RiContactsFill",
+  "Resources/Cells/Coin Cell CR2032.md": "RiCoinFill",
+  "Resources/Cells/Pouch Cell 5x5.md": "FasDiamond",
+  "Literature": "RiDocumentBookMarkFill",
+  "Notes": "FasPenToSquare",
+  "Lists/Chemicals.md": "FasFlask",
+  "Lists/Books.md": "FasBook",
+  "Lists/Analyses.md": "FasMagnifyingGlass",
+  "Lists/Electrodes.md": "FasToiletPaper",
+  "Lists/ELN Note Versions.md": "FasFileCode",
+  "Lists/Instruments.md": "FasMicroscope",
+  "Lists/Labs.md": "FasBuilding",
+  "Lists/Processes.md": "FasRoute",
+  "Lists/Publications.md": "RiArticleFill",
+  "Lists/Samples.md": "FasCoins",
+  "Notes/Miscellaneous/Databases for Research.md": "FasDatabase",
+  "Notes/Miscellaneous": "FasBoxArchive",
+  "Lists/Notes.md": "FasPenToSquare",
+  "assets/literature templates": "RiDocumentBookMarkFill",
+  "assets/literature templates/Import Publication.md": "FasFileCode",
+  "assets/literature templates/Import Publication CB.md": "FasFileCode",
+  "Resources/Cells/Swagelok 3-electrode cell.md": "FasCarBattery",
+  "Notes/HowTos/Display a CSV File as Table and Chart.md": "FasChartLine",
+  "assets/javascript": "FasCode",
+  "Resources/Cells": "RiBattery2ChargeFill",
+  "Resources/Devices": "FasFilter",
+  "Resources/Instruments": "FasMicroscope",
+  "Resources/Labs": "FasBuilding",
+  "Resources/Electrodes/Standard": "FasToiletPaper",
+  "Daily Notes": "FasCalendarDay",
+  "Contacts": "FasAddressBook",
+  "Experiments/Analyses": "FasMagnifyingGlass",
+  "Experiments/Samples": "FasCoins",
+  "Experiments/Processes": "FasRoute",
+  "Meetings": "FasPeopleArrowsLeftRight",
+  "Projects": "RiCommandFill",
+  "Literature/Books": "FasBook",
+  "Literature/Publications": "RiArticleFill",
+  "assets/PDF": "FasFilePdf",
+  "assets/images": "FasImages",
+  "assets/templates": "FasFileCode",
+  "Notes/HowTos": "RiQuestionnaireFill",
+  "Resources/Electrodes/Reference": "FasEyeDropper",
+  "Notes/Miscellaneous/Electrochemical Glossary": "RiBookmarkFill",
+  "Resources/Chemicals/binder": "FasLink",
+  "Resources/Chemicals/active material": "FasPlusMinus",
+  "Resources/Chemicals/metal": "RiCoinLine",
+  "Resources/Chemicals/conductive additive": "RiFlashlightFill",
+  "Resources/Chemicals/electrolyte": "FasFlask",
+  "Resources/Chemicals/solvent": "RiInkBottleFill",
+  "Resources/Chemicals/current collector": "RiFilePaper2Fill",
+  "Resources/Chemicals/separator": "RiFilePaper2Fill",
+  "assets/javascript/dataview": "FasTable",
+  "assets/javascript/templater": "FasFileCode",
+  "assets/javascript/code library": "FasCode",
+  "assets/Pandoc": "FasFileExport",
+  "assets/Pandoc/filters": "FasFilter",
+  "assets/Pandoc/MS Word": "FasFileWord",
+  "assets/Pandoc/styles": "FasQuoteRight",
+  "assets/Pandoc/latex": "FasFileLines",
+  "assets/images/Motivation": "FasSquareCaretRight",
+  "Lists/Meetings.md": "FasPeopleArrowsLeftRight",
+  "assets/Analysis Settings.md": "FasGear",
+  "Writing": "FasPenToSquare",
+  "Writing/Manuscripts": "RiNewspaperFill",
+  "Writing/Reports": "FasFileInvoice",
+  "Writing/Thesis": "FasGraduationCap",
+  "Resources/Chemicals/inorganic compound": "FasCubes",
+  "assets/javascript/dataview/views": "FasBinoculars",
+  "Lists/Devices.md": "FasFilter",
+  "Notes/HowTos/Obsidian ELN/Obsidian ELN - Getting started.md": "FasCircleInfo",
+  "Resources/Chemicals/MSDS": "FasSkullCrossbones",
+  "Lists/Lists.md": "FasListUl",
+  "assets/templates/New Project.md": "FasFileCode",
+  "Tasks": "FasListCheck"
+}

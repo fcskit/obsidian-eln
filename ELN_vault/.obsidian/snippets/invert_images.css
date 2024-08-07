@@ -1,0 +1,13 @@
+/* Updated 2022-02-28 */
+
+.theme-light {
+    --inversion-amount: 0;
+}
+
+.theme-dark {
+    --inversion-amount: 0.9;
+}
+
+.invert-images img {
+    filter: invert(var(--inversion-amount))
+}

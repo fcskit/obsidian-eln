@@ -1,0 +1,17 @@
+{
+  "version": 3,
+  "homepages": {
+    "Main Homepage": {
+      "version": 2,
+      "hasRibbonIcon": true,
+      "openMode": "Keep open notes",
+      "view": "Reading view",
+      "refreshDataview": true,
+      "value": "Home",
+      "kind": "File",
+      "commands": [],
+      "openOnStartup": true
+    }
+  },
+  "separateMobile": false
+}

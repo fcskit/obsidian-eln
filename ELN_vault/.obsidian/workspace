@@ -1,0 +1,151 @@
+{
+  "main": {
+    "id": "01eb2b0f073c9dfc",
+    "type": "split",
+    "children": [
+      {
+        "id": "3affa934002298a5",
+        "type": "leaf",
+        "state": {
+          "type": "kanban",
+          "state": {
+            "file": "Kanban Test.md"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "19a95cb96cb71dc6",
+    "type": "split",
+    "children": [
+      {
+        "id": "38a2e076c4ef3961",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4b8c203f4030494b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "40580c13049d6795",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#project",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "388a16d55fcf413a",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6d4b2d9d326b3aaa",
+    "type": "split",
+    "children": [
+      {
+        "id": "81266c60737e8b35",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "488f637c026ca446",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Kanban Test.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5f79bab1df630570",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Kanban Test.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "47cc9ecbdcf7ca74",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "87019318fa13e35a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Kanban Test.md"
+              }
+            }
+          },
+          {
+            "id": "5cfb00333c45506a",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "3affa934002298a5",
+  "lastOpenFiles": [
+    "Kanban Test.md",
+    "Bewerbungsgespräche/Lars Esmezjan.md",
+    "Bewerbungsgespräche/Bewerbungsgespräche.md",
+    "Bewerbungsgespräche/Evangelos Tsagkarakis.md",
+    "Bewerbungsgespräche/Cordula Aurelia Vlaic.md",
+    "Obsidan/Obsidian Video tutorials.md",
+    "Home.md",
+    "Development/Python/add an index column to a multi-index.md",
+    "Development/Python/Pandas - Indices.md",
+    "Development/Python/pandas series.md"
+  ]
+}

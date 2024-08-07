@@ -1,0 +1,71 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "assets/templates",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": false,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "assets/javascript/templater",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "/",
+      "template": "assets/templates/New Note.md"
+    },
+    {
+      "folder": "Daily Notes",
+      "template": "assets/templates/New Daily Note.md"
+    },
+    {
+      "folder": "Meetings",
+      "template": "assets/templates/New Meeting.md"
+    },
+    {
+      "folder": "Resources/Chemicals",
+      "template": "assets/templates/New Chemical.md"
+    },
+    {
+      "folder": "Resources/Devices",
+      "template": "assets/templates/New Device.md"
+    },
+    {
+      "folder": "Resources/Instruments",
+      "template": "assets/templates/New Instrument.md"
+    },
+    {
+      "folder": "Experiments/Processes",
+      "template": "assets/templates/New Process.md"
+    },
+    {
+      "folder": "Tasks",
+      "template": "assets/templates/New Task List.md"
+    },
+    {
+      "folder": "Contacts",
+      "template": "assets/templates/New Contact.md"
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [
+    "assets/templates/New Analysis.md",
+    "assets/templates/New Chemical.md",
+    "assets/templates/New Contact.md",
+    "assets/templates/New Device.md",
+    "assets/templates/New Instrument.md",
+    "assets/templates/New Note.md",
+    "assets/templates/New Process.md",
+    "assets/templates/New Project.md",
+    "assets/templates/New Sample.md"
+  ],
+  "startup_templates": [
+    ""
+  ],
+  "enable_ribbon_icon": true
+}

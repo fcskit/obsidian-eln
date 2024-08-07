@@ -1,0 +1,473 @@
+/*
+ * ========================================================
+ * Format Obsidian and Dataview TABLESPREVIEW MODE
+ * ========================================================
+ */
+
+/* @settings
+name: Dashboard Snippet
+id: dashboard-snippet
+settings:
+
+# Colors
+
+    - 
+        id: dashboard-colors
+        title: Format dashboard colors
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: dashboard-card-bg-color
+        title: Color of dashboard cards
+        type: variable-themed-color
+        default-light: '#'
+        default-dark: '#'
+        format: 'rgb-values'
+    -
+        id: dashboard-h3-color
+        title: Color of H3 heading (Card title)
+        type: class-select
+        allowEmpty: true
+        default: dashboard-h3-mauve
+        options:
+            - 
+                label: Rosewater
+                value: dashboard-h3-rosewater
+            - 
+                label: Flamingo
+                value: dashboard-h3-flamingo
+            - 
+                label: Pink
+                value: dashboard-h3-pink
+            - 
+                label: Mauve
+                value: dashboard-h3-mauve
+            - 
+                label: Red
+                value: dashboard-h3-red
+            - 
+                label: Maroon
+                value: dashboard-h3-maroon
+            - 
+                label: Peach
+                value: dashboard-h3-peach
+            - 
+                label: Yellow
+                value: dashboard-h3-yellow
+            - 
+                label: Green
+                value: dashboard-h3-green
+            - 
+                label: Teal
+                value: dashboard-h3-teal
+            - 
+                label: Sky
+                value: dashboard-h3-sky
+            - 
+                label: Sapphire
+                value: dashboard-h3-sapphire
+            - 
+                label: Blue
+                value: dashboard-h3-blue
+            - 
+                label: Lavender
+                value: dashboard-h3-lavender
+    -
+        id: dashboard-bold-color
+        title: Color of bold text
+        type: class-select
+        allowEmpty: true
+        default: dashboard-bold-pink
+        options:
+            - 
+                label: Rosewater
+                value: dashboard-bold-rosewater
+            - 
+                label: Flamingo
+                value: dashboard-bold-flamingo
+            - 
+                label: Pink
+                value: dashboard-bold-pink
+            - 
+                label: Mauve
+                value: dashboard-bold-mauve
+            - 
+                label: Red
+                value: dashboard-bold-red
+            - 
+                label: Maroon
+                value: dashboard-bold-maroon
+            - 
+                label: Peach
+                value: dashboard-bold-peach
+            - 
+                label: Yellow
+                value: dashboard-bold-yellow
+            - 
+                label: Green
+                value: dashboard-bold-green
+            - 
+                label: Teal
+                value: dashboard-bold-teal
+            - 
+                label: Sky
+                value: dashboard-bold-sky
+            - 
+                label: Sapphire
+                value: dashboard-bold-sapphire
+            - 
+                label: Blue
+                value: dashboard-bold-blue
+            - 
+                label: Lavender
+                value: dashboard-bold-lavender
+*/
+
+.theme-light {
+    --dashboard-card-bg-color: var(--titlebar-background);
+}
+
+.theme-dark {
+    --dashboard-card-bg-color: var(--titlebar-background);
+}
+
+.dashboard-bold-rosewater{
+    --dashboard-bold-color: var(--ctp-rosewater, var(--ctp-ext-rosewater, 222, 149, 132));
+}
+
+.dashboard-h3-rosewater {
+    --dashboard-h3-color: var(--ctp-rosewater, var(--ctp-ext-rosewater, 222, 149, 132));
+}
+
+.dashboard-bold-flamingo {
+    --dashboard-bold-color: var(--ctp-flamingo, var(--ctp-ext-flamingo, 221, 120, 120));
+}
+
+.dashboard-h3-flamingo {
+    --dashboard-h3-color: var(--ctp-flamingo, var(--ctp-ext-flamingo, 221, 120, 120));
+}
+
+.dashboard-bold-pink {
+    --dashboard-bold-color: var(--ctp-pink, var(--ctp-ext-pink, 236, 131, 208));
+}
+
+.dashboard-h3-pink {
+    --dashboard-h3-color: var(--ctp-pink, var(--ctp-ext-pink, 236, 131, 208));
+}
+
+.dashboard-bold-mauve {
+    --dashboard-bold-color: var(--ctp-mauve, var(--ctp-ext-mauve, 203, 166, 247));
+}
+
+.dashboard-h3-mauve {
+    --dashboard-h3-color: var(--ctp-mauve, var(--ctp-ext-mauve, 203, 166, 247));
+}
+
+.dashboard-bold-red {
+    --dashboard-bold-color: var(--ctp-red, var(--ctp-ext-red, 210, 15, 57));
+}
+
+.dashboard-h3-red {
+    --dashboard-h3-color: var(--ctp-red, var(--ctp-ext-red, 210, 15, 57));
+}
+
+.dashboard-bold-maroon {
+    --dashboard-bold-color: var(--ctp-maroon, var(--ctp-ext-maroon, 230, 69, 83));
+}
+
+.dashboard-h3-maroon {
+    --dashboard-h3-color: var(--ctp-maroon, var(--ctp-ext-maroon, 230, 69, 83));
+}
+
+.dashboard-bold-peach {
+    --dashboard-bold-color: var(--ctp-peach, var(--ctp-ext-peach, 254, 100, 11));
+}
+
+.dashboard-h3-peach {
+    --dashboard-h3-color: var(--ctp-peach, var(--ctp-ext-peach, 254, 100, 11));
+}
+
+.dashboard-bold-yellow {
+    --dashboard-bold-color: var(--ctp-yellow, var(--ctp-ext-yellow, 228, 147, 32));
+}
+
+.dashboard-h3-yellow {
+    --dashboard-h3-color: var(--ctp-yellow, var(--ctp-ext-yellow, 228, 147, 32));
+}
+
+.dashboard-bold-green {
+    --dashboard-bold-color: var(--ctp-green, var(--ctp-ext-green, 64, 160, 43));
+}
+
+.dashboard-h3-green {
+    --dashboard-h3-color: var(--ctp-green, var(--ctp-ext-green, 64, 160, 43));
+}
+
+.dashboard-bold-teal {
+    --dashboard-bold-color: var(--ctp-teal, var(--ctp-ext-teal, 23, 146, 153));
+}
+
+.dashboard-h3-teal {
+    --dashboard-h3-color: var(--ctp-teal, var(--ctp-ext-teal, 23, 146, 153));
+}
+
+.dashboard-bold-sky {
+    --dashboard-bold-color: var(--ctp-sky, var(--ctp-ext-sky, 4, 165, 229));
+}
+
+.dashboard-h3-sky {
+    --dashboard-h3-color: var(--ctp-sky, var(--ctp-ext-sky, 4, 165, 229));
+}
+
+.dashboard-bold-sapphire {
+    --dashboard-bold-color: var(--ctp-sapphire, var(--ctp-ext-sapphire, 32, 159, 181));
+}
+
+.dashboard-h3-sapphire {
+    --dashboard-h3-color: var(--ctp-sapphire, var(--ctp-ext-sapphire, 32, 159, 181));
+}
+
+.dashboard-bold-blue {
+    --dashboard-bold-color: var(--ctp-blue, var(--ctp-ext-blue, 42, 110, 245));
+}
+
+.dashboard-h3-blue {
+    --dashboard-h3-color: var(--ctp-blue, var(--ctp-ext-blue, 42, 110, 245));
+}
+
+.dashboard-bold-lavender {
+    --dashboard-bold-color: var(--ctp-lavender, var(--ctp-ext-lavender, 114, 135, 253));
+}
+
+.dashboard-h3-lavender {
+    --dashboard-h3-color: var(--ctp-lavender, var(--ctp-ext-lavender, 114, 135, 253));
+}
+
+.dashboard .markdown-preview-sizer.markdown-preview-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard .markdown-preview-pusher {
+    order: -1;
+}
+
+.dashboard .el-pre.obsidian-banner-wrapper {
+    order: -1;
+}
+
+.dashboard .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+    width: 55rem;
+}
+
+.dashboard {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    padding-top: 20px !important;
+}
+
+.dashboard .markdown-preview-section {
+    max-width: 100%;
+}
+
+/* Title at top of the document */
+.dashboard .markdown-preview-section .title {
+    top: 60px;
+    position: absolute;
+    font-size: 30pt !important;
+    font-weight: 900;
+    text-shadow: 2px 2px 7px #83a4b9;
+    letter-spacing: 8px;
+}
+
+.dashboard h1,
+.dashboard div.HyperMD-header.HyperMD-header-1 {
+    border-bottom-style: solid !important;
+    border-width: 1px !important;
+    border-color: lightgrey;
+    padding-bottom: 3px !important;
+    font-size: 18pt;
+}
+
+.dashboard h2 {
+    padding-bottom: 3px !important;
+    font-size: 16pt;
+}
+
+.dashboard h3,
+.dashboard .cm-header.cm-header-3 {
+    padding-bottom: 3px !important;
+    font-size: 13pt;
+    color: rgb(var(--dashboard-h3-color));
+}
+
+.dashboard h3 > a,
+.dashboard .cm-header.cm-header-3 > a {
+    color: rgb(var(--dashboard-h3-color)) !important;
+}
+
+.dashboard strong {
+    color: rgb(var(--dashboard-bold-color));
+}
+
+ 
+.dashboard div.el-ul>ul>li>span.list-bullet::after {
+    visibility: hidden;
+}
+
+/* 
+.dashboard div.el-ul > ul {
+    display: flex;
+    column-gap: 0px;
+    flex-flow: row wrap; */
+    /* background-color: #F9F9F9; */
+/* } */
+
+.dashboard div.el-ul>ul {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+}
+
+/* hide marker of top level list */
+.dashboard div.el-ul>ul>li>div.list-bullet::after {
+    visibility: hidden;
+}
+
+.dashboard div > ul > li {
+    width: 100%-20px;
+    margin-bottom: 20px;
+    padding: 8px;
+    background-color: var(--dashboard-card-bg-color);
+    border-radius: 5px;
+    /* box-shadow: 0 20px 30px rgba(0, 0, 0, .4); */
+}
+
+.dashboard .task-list-item {
+    width: auto !important;
+}
+
+ul.contains-task-list.plugin-tasks-query-result {
+    row-gap: normal;
+}
+
+/* uncomment to hide list bullets of dataview querry */
+/*
+.dashboard ul.dataview.list-view-ul {
+    padding-left: 5px;
+    min-width: 100px;
+    width: 100%;
+} 
+*/
+
+.dashboard ul.dataview.list-view-ul {
+    padding-left: 0rem;
+}
+
+.dashboard ul.dataview.list-view-ul > li {
+    min-width: 100px;
+    width: 100%-20px;
+    margin-bottom: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 0.3rem;
+}
+
+.dashboard .el-lang-dataviewjs.el-div > div.block-language-dataviewjs.node-insert-event > div {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    padding-left: 32px;
+    column-gap: 35px;
+    flex-flow: column wrap;
+    height: 330px;
+    width: 100%;
+}
+
+.dashboard .el-lang-dataviewjs.el-div>div.block-language-dataviewjs.node-insert-event>div>h4 {
+    display: flex;
+    align-items: flex-end;
+    align-self: flex-start;
+    margin-top: 3px;
+    margin-bottom: 7px;
+    width: 30%;
+    flex: 0 0 50px;
+}
+
+.dashboard .el-lang-dataviewjs.el-div>div.block-language-dataviewjs.node-insert-event>div>div.dataview.result-group {
+    width: 31%;
+    overflow-y: scroll;
+    align-self: flex-start;
+    flex: 1 1 250px;
+    background-color: var(--dashboard-card-bg-color);
+    border-radius: 5px;
+}
+
+.dashboard .el-lang-dataviewjs.el-div>div.block-language-dataviewjs.node-insert-event>div>div.dataview.result-group>ul>li.dataview.task-list-item {
+    width: 100%-20px !important;
+    padding-bottom: 3px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.dashboard .markdown-rendered div.motivation-img-container {
+    background-color: var(--dashboard-card-bg-color);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.dashboard .markdown-rendered img.motivation-img {
+    width: 50%;
+}
+
+.dashboard .markdown-rendered div.progress-container {
+    background-color: var(--dashboard-card-bg-color);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.dashboard div.HyperMD-list-line.HyperMD-list-line-1 {
+    background-color: var(--dashboard-card-bg-color);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-top: 1rem;
+}
+
+.dashboard div.HyperMD-list-line.HyperMD-list-line-2,
+.dashboard .cm-line[style^="text-indent:"]:has(span.cm-list-1) {
+    background-color: var(--dashboard-card-bg-color);
+}
+
+.dashboard div.HyperMD-list-line.HyperMD-list-line-2:has(+div.cm-line>br),
+.dashboard .cm-line[style^="text-indent:"]:has(span.cm-list-1):has(+div.cm-line>br) {
+    background-color: var(--dashboard-card-bg-color);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-bottom: 1rem;
+}
+
+.dashboard div.HyperMD-list-line.HyperMD-list-line-1+div.cm-preview-code-block.cm-embed-block.markdown-rendered {
+    background-color: var(--dashboard-card-bg-color);
+}
+
+.dashboard div.HyperMD-list-line.HyperMD-list-line-1+div.cm-preview-code-block.cm-embed-block.markdown-rendered:has(+div.cm-line>br) {
+    background-color: var(--dashboard-card-bg-color);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-bottom: 1rem;
+}
+
+.dashboard div.HyperMD-list-line.HyperMD-list-line-2+div.cm-preview-code-block.cm-embed-block.markdown-rendered {
+    background-color: var(--dashboard-card-bg-color);
+}
+
+.dashboard div.HyperMD-list-line.HyperMD-list-line-2+div.cm-preview-code-block.cm-embed-block.markdown-rendered:has(+div.cm-line>br) {
+    background-color: var(--dashboard-card-bg-color);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-bottom: 1rem;
+}

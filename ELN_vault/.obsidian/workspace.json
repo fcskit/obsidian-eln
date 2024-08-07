@@ -1,0 +1,253 @@
+{
+  "main": {
+    "id": "01eb2b0f073c9dfc",
+    "type": "split",
+    "children": [
+      {
+        "id": "88a6a9ec7f63fbc2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7b692bea40b3b8de",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Home.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "19a95cb96cb71dc6",
+    "type": "split",
+    "children": [
+      {
+        "id": "38a2e076c4ef3961",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4b8c203f4030494b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "40580c13049d6795",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "[\"author\"]",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "72aad16b355bd4ff",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "9c844088f8c174d7",
+            "type": "leaf",
+            "state": {
+              "type": "mk-file-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "81c7e483492c1b04",
+            "type": "leaf",
+            "state": {
+              "type": "mk-path-view",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 339.5
+  },
+  "right": {
+    "id": "6d4b2d9d326b3aaa",
+    "type": "split",
+    "children": [
+      {
+        "id": "81266c60737e8b35",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "488f637c026ca446",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Home.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5f79bab1df630570",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Home.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "47cc9ecbdcf7ca74",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "alphabetical",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "87019318fa13e35a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Home.md"
+              }
+            }
+          },
+          {
+            "id": "34a76d3d10bd7b92",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          },
+          {
+            "id": "d2667affcbdc6aed",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "Home.md"
+              }
+            }
+          },
+          {
+            "id": "0a629b3abc458985",
+            "type": "leaf",
+            "state": {
+              "type": "modal-form-manage-forms-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 371.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Schnellauswahl öffnen": false,
+      "graph:Graphen-Ansicht öffnen": false,
+      "canvas:Neuen Canvas erstellen": false,
+      "daily-notes:Heutige Notiz öffnen": false,
+      "templates:Vorlage einfügen": false,
+      "command-palette:Befehlspalette öffnen": false,
+      "markdown-importer:Markdown Importprogramm öffnen": false,
+      "audio-recorder:Audioaufzeichnung starten/stoppen": false,
+      "workspaces:Workspace-Layouts verwalten": false,
+      "templater-obsidian:Templater": false,
+      "homepage:Open homepage": false,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "modalforms:Edit forms": false
+    }
+  },
+  "active": "7b692bea40b3b8de",
+  "lastOpenFiles": [
+    "Resources/Labs/Building XXX/Lab BXXX - R1xx.md",
+    "Experiments/Processes/cell assembly/Dummy Process.md",
+    "Resources/Cells/Pouch Cell 5x5.md",
+    "Experiments/Processes/calcination/Calcination.md",
+    "Resources/Cells/Swagelok 3-electrode cell.md",
+    "Resources/Cells/Coin Cell CR2032.md",
+    "Resources/Electrodes/Reference/Standard Calomel (3.5M KCl) Reference.md",
+    "Resources/Chemicals/current collector/Aluminium Current Collector 12 µm - B01.md",
+    "Resources/Electrodes/Reference/Lithium Metal Reference.md",
+    "Resources/Instruments/ZEISS - Merlin/ZEISS - Merlin.md",
+    "Resources/Devices/MTI - MSK-110 - Hydraulic Coin Cell Crimper/MTI - MSK-110 - Hydraulic Coin Cell Crimper.md",
+    "Resources/Labs/Building XXX/Lab B421 - R109.md",
+    "Resources/Instruments/ZEISS - Merlin/Documents/Zeiss-SmartSEM-software-manual.pdf",
+    "Resources/Instruments/ZEISS - Merlin/Documents/Zeiss-MERLIN_Brochure.pdf",
+    "Resources/Instruments/BioLogic - VMP 221/BioLogic - VMP 221.md",
+    "Contacts/Joe Public.md",
+    "assets/Analysis Settings.md",
+    "Lists/Labs.md",
+    "Lists/Analyses.md",
+    "Home.md",
+    "Tasks/My Tasks.md",
+    "Daily Notes/2024/07 Juli/2024-07-31 - Mittwoch, 31. Juli.md",
+    "Daily Notes/2024/07 Juli/2024-07-30 - Dienstag, 30. Juli.md",
+    "assets/javascript/dataview/views/circular_progress.js",
+    "assets/templates/New Task List.md",
+    "assets/javascript/dataview/views/progress_circle.js",
+    "assets/javascript/dataview/views/daily_note_nav Kopie.js",
+    "Tasks/test tasks.md",
+    "Tasks/ELN Development Tasks.md",
+    "assets/ELN Settings.md",
+    "Tasks",
+    "assets/templates/Custom Templates/Custom Sample Template.md",
+    "assets/javascript/templater/new_task_list.js",
+    "assets/javascript/templater/new_process Kopie.js",
+    "Resources/Instruments/HORIBA - LabRAM HR Evolution/Documents/Horiba-LabRam HR-Evolution.png",
+    "Resources/Instruments/ZEISS - Merlin/Documents/ZEISS_MERLIN_FE-SEM.jpg",
+    "Resources/Instruments/HORIBA - LabRAM HR Evolution/Documents/LabSpec6_-_Reference_Manual-2.pdf",
+    "Resources/Instruments/HORIBA - LabRAM HR Evolution/Documents/horiba_scientific_labram_hr_evolution_raman_spectrometer_manual.pdf",
+    "Resources/Instruments/BioLogic - VMP 221/Documents/biologic_vmp3_potentiostat.png",
+    "assets/images/Motivation/start your day with a smile.png",
+    "assets/images/Motivation/start_with_a_smile.png",
+    "Experiments/Analyses/Demo Project/VM-DP-el001/SE_thorny_01/VM-DP-el001 - SE_thorny_01.jpg",
+    "Experiments/Analyses/Demo Project/MM-DP-cp001/GCPL_02/plots/MM-DP-cp001 - GCPL_02_dq_dv_vs_v.svg",
+    "Experiments/Analyses/Demo Project/MM-DP-cp001/GCPL_02/plots/MM-DP-cp001 - GCPL_02_dq_dv_vs_v.png",
+    "Experiments/Analyses/Demo Project/MM-DP-cp001/GCPL_02/plots/MM-DP-cp001 - GCPL_02_v_vs_cap.svg",
+    "Experiments/Analyses/Demo Project/MM-DP-cp001/GCPL_02/plots/MM-DP-cp001 - GCPL_02_v_vs_cap.png",
+    "Unbenannt.canvas"
+  ]
+}

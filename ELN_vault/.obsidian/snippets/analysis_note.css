@@ -1,0 +1,94 @@
+body {
+    --img-border-radius: 15px;
+    --img-max-width: 78%;
+    --callout-gallery-gap: 2%;
+}
+
+.theme-light {
+    --graph-background: none;
+    --graph-filter: none;
+}
+
+.theme-dark {
+    --graph-background: none;
+    /* --graph-background: rgba(255, 255, 255, 0.15); */
+    --graph-filter: invert(1) hue-rotate(180deg) brightness(90%) saturate(2) contrast(0.8);
+}
+
+.analysis-note div[data-callout="graph"].callout>.callout-title {
+    display: none;
+}
+
+.analysis-note div[data-callout="graph"].callout>.callout-content {
+    display: contents;
+}
+
+.analysis-note div[data-callout="graph"].callout {
+    border: unset;
+    margin: unset;
+    padding: unset;
+    clear: both;
+    border-left-style: none !important;
+    background: var(--graph-background);
+}
+
+div[data-callout-metadata*="gallery"].callout>.callout-content>p {
+    display: flex;
+    gap: var(--callout-gallery-gap);
+    margin-top: calc(var(--callout-gallery-gap));
+    margin-bottom: 0;
+}
+
+.analysis-note div[data-embed-type="image"].el-embed-image.el-p {
+    margin-top: var(--callout-gallery-gap);
+}
+
+.analysis-note div[data-callout-metadata*="gallery"].callout>.callout-content {
+    --callout-content-padding: 0.5rem 0 0 0;
+}
+
+/* Introduce subtle border and make the gallery as object-fit: cover */
+.analysis-note div[data-callout="graph"][data-callout-metadata*="gallery"].callout>.callout-content>p img {
+    max-width: var(--img-max-width);
+    width: var(--img-max-width);
+    border-style: none;
+    object-fit: cover;
+    display: block;
+    filter: var(--graph-filter);
+}
+
+.analysis-note div[data-callout="graph"].callout>.callout-content>p>span {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.analysis-note div[data-callout="graph"].callout>.callout-content>p img {
+    filter: var(--graph-filter);
+}
+
+.analysis-note div[data-embed-type="image"]>p img {
+    width: 80%;
+    border-radius: var(--img-border-radius);
+    object-fit: cover;
+}
+
+.analysis-note div[data-embed-type="image"]>p 
+{
+    text-align: center;
+}
+
+/* display: block for img is important to control the hidden margin-bottom but for Minimal, it uses display: flex for top level divs which pose another "margin" issues no plan to solve yet as this is not critical */
+
+/* Editing View - as alternate to <p> in Reading View since there's no natural container in Editing View using <p> */
+.analysis-note div:not(.cm-callout):not(.HyperMD-list-line).image-embed img {
+    width: 80%;
+    display: unset;
+    object-fit: cover;
+    filter: var(--graph-filter);
+}
+
+.analysis-note div.image-embed {
+    text-align: center;
+}
+
+/* previously i have max-width: 50% */

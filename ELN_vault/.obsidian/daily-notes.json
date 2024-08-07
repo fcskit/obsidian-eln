@@ -1,0 +1,5 @@
+{
+  "template": "assets/templates/Daily Note - Template",
+  "folder": "Daily Note",
+  "format": "YYYY-MM-DD - dddd, Do MMMM"
+}

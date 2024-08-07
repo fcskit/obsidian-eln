@@ -1,0 +1,24 @@
+{
+  "theme": "system",
+  "cssTheme": "AnuPpuccin",
+  "enabledCssSnippets": [
+    "circular_progress_2",
+    "MCL Gallery Cards",
+    "MCL Multi Column",
+    "custom_theme",
+    "MCL Wide Views",
+    "circular_progress",
+    "custom_callouts",
+    "extended-colorschemes",
+    "hide_properties",
+    "obsidian_eln",
+    "page-styles",
+    "dashboard",
+    "daily-note",
+    "analysis_note",
+    "task-list"
+  ],
+  "accentColor": "#66b2a9",
+  "baseFontSize": 17,
+  "translucency": false
+}

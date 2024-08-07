@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "name": "Markdown"
+    },
+    {
+      "name": "Markdown (Hugo)"
+    },
+    {
+      "name": "Html"
+    },
+    {
+      "name": "TextBundle"
+    },
+    {
+      "name": "PDF"
+    },
+    {
+      "name": "Word (.docx)"
+    },
+    {
+      "name": "OpenOffice"
+    },
+    {
+      "name": "RTF"
+    },
+    {
+      "name": "Epub"
+    },
+    {
+      "name": "Latex"
+    },
+    {
+      "name": "Media Wiki"
+    },
+    {
+      "name": "reStructuredText"
+    },
+    {
+      "name": "Textile"
+    },
+    {
+      "name": "OPML"
+    },
+    {
+      "name": "Typst"
+    },
+    {
+      "name": "Bibliography"
+    },
+    {
+      "name": "Word (report)",
+      "type": "pandoc",
+      "arguments": "-f ${fromFormat} --resource-path=\"${currentDir}\" --resource-path=\"${currentDir}/images\" --resource-path=\"${vaultDir}/assets/Pandoc/styles\" --resource-path=\"${attachmentFolderPath}\" -s -o \"${outputPath}\" -t docx",
+      "extension": ".docx",
+      "customArguments": "--reference-doc=\"${vaultDir}/assets/Pandoc/MS Word/report.docx\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/placeholders.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/pagebreak.lua\" --filter pandoc-crossref --citeproc"
+    },
+    {
+      "name": "Manuscript (word, wiley)",
+      "type": "pandoc",
+      "arguments": "-f ${fromFormat} --resource-path=\"${currentDir}\" --resource-path=\"${currentDir}/images\" --resource-path=\"${vaultDir}/assets/Pandoc/styles\" --resource-path=\"${attachmentFolderPath}\" -s -o \"${outputPath}\" -t docx",
+      "extension": ".docx",
+      "customArguments": "--reference-doc=\"${vaultDir}/assets/Pandoc/MS Word/manuscript_wiley.docx\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/placeholders.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/pagebreak.lua\" --filter pandoc-crossref --citeproc"
+    },
+    {
+      "name": "Manuscript (word, elsevier)",
+      "type": "pandoc",
+      "arguments": "-f ${fromFormat} --resource-path=\"${currentDir}\" --resource-path=\"${currentDir}/images\" --resource-path=\"${vaultDir}/assets/Pandoc/styles\" --resource-path=\"${attachmentFolderPath}\" -s -o \"${outputPath}\" -t docx",
+      "extension": ".docx",
+      "customArguments": "--reference-doc=\"${vaultDir}/assets/Pandoc/MS Word/manuscript_elsevier.docx\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/placeholders.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/pagebreak.lua\" --filter pandoc-crossref --citeproc"
+    },
+    {
+      "name": "Manuscript (word, rsc)",
+      "type": "pandoc",
+      "arguments": "-f ${fromFormat} --resource-path=\"${currentDir}\" --resource-path=\"${currentDir}/images\" --resource-path=\"${vaultDir}/assets/Pandoc/styles\" --resource-path=\"${attachmentFolderPath}\" -s -o \"${outputPath}\" -t docx",
+      "extension": ".docx",
+      "customArguments": "--reference-doc=\"${vaultDir}/assets/Pandoc/MS Word/manuscript_rsc.docx\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/placeholders.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/pagebreak.lua\" --filter pandoc-crossref --citeproc"
+    },
+    {
+      "name": "Thesis (word)",
+      "type": "pandoc",
+      "arguments": "-f ${fromFormat} --resource-path=\"${currentDir}\" --resource-path=\"${currentDir}/images\" --resource-path=\"${vaultDir}/assets/Pandoc/styles\" --resource-path=\"${attachmentFolderPath}\" -s -o \"${outputPath}\" -t docx",
+      "extension": ".docx",
+      "customArguments": "--reference-doc=\"${vaultDir}/assets/Pandoc/MS Word/thesis.docx\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/placeholders.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/pagebreak.lua\" --filter pandoc-crossref --citeproc"
+    }
+  ],
+  "defaultExportDirectoryMode": "Auto",
+  "openExportedFile": true,
+  "env": {
+    "darwin": {
+      "PATH": "/usr/local/bin:/Library/TeX/texbin:${PATH}"
+    }
+  },
+  "showExportProgressBar": true,
+  "version": "1.1.7",
+  "lastEditName": "Word (report)",
+  "lastExportDirectory": {
+    "darwin": "/Users/gc9830/Documents/Temp"
+  },
+  "lastExportType": "Manuscript (word, wiley)"
+}

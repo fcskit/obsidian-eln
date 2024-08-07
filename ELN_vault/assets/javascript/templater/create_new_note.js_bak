@@ -1,0 +1,16 @@
+async function create_new_note(filename, folder, content="") {
+  const path = require('path');
+  if (!app.vault.getAbstractFileByPath(folder)) {
+    console.log(`${folder} does not exist.`);
+    console.log(`Creating folder ...`);
+    await app.vault.createFolder(folder)
+  } else {
+    console.log(`${folder} exists.`);
+  }
+  console.log(`Creating new sample note in folder ${folder} with name ${filename}`);
+  const filepath = path.join(folder, filename);
+  const note = await app.vault.create(filepath, content);
+  return note;
+}
+
+module.exports = create_new_note;

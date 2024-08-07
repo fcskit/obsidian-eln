@@ -1,0 +1,37 @@
+{
+  "database": "Zotero",
+  "noteImportFolder": "Literature",
+  "pdfExportImageDPI": 120,
+  "pdfExportImageFormat": "jpg",
+  "pdfExportImageQuality": 90,
+  "citeFormats": [
+    {
+      "name": "Pandoc",
+      "format": "pandoc",
+      "cslStyle": "american-chemical-society",
+      "template": ""
+    }
+  ],
+  "exportFormats": [
+    {
+      "name": "Import Publication",
+      "outputPathTemplate": "Literature/Publications/{{citekey}}.md",
+      "imageOutputPathTemplate": "Literature/Publications/{{citekey}}/",
+      "imageBaseNameTemplate": "image",
+      "templatePath": "assets/literature templates/Import Publication.md",
+      "cslStyle": "american-chemical-society"
+    },
+    {
+      "name": "Import Book",
+      "outputPathTemplate": "Literature/Books/{{citekey}}.md",
+      "imageOutputPathTemplate": "Literature/Books/{{citekey}}/",
+      "imageBaseNameTemplate": "image",
+      "templatePath": "assets/literature templates/Import Publication CB.md",
+      "cslStyle": "american-chemical-society"
+    }
+  ],
+  "citeSuggestTemplate": "[[{{citekey}}]]",
+  "openNoteAfterImport": false,
+  "whichNotesToOpenAfterImport": "first-imported-note",
+  "shouldShowCiteSuggest": true
+}

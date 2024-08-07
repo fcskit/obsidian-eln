@@ -1,0 +1,33 @@
+{
+  "enabledButtons": [
+    {
+      "id": "homepage:open-homepage",
+      "icon": "lucide-home",
+      "name": "Homepage: Open homepage",
+      "showButtons": "both"
+    },
+    {
+      "id": "templater-obsidian:create-new-note-from-template",
+      "icon": "add-note-glyph",
+      "name": "Templater: Create new note from template",
+      "showButtons": "both"
+    },
+    {
+      "id": "obsidian-file-link:add-file-link",
+      "icon": "links-going-out",
+      "name": "Better File Link: Add File Link",
+      "showButtons": "both"
+    },
+    {
+      "id": "obsidian-zotero-desktop-connector:zdc-exp-Import Publication",
+      "icon": "import-glyph",
+      "name": "Zotero Integration: Import Publication",
+      "showButtons": "both"
+    }
+  ],
+  "desktop": true,
+  "titleLeft": [],
+  "titleRight": [],
+  "titleCenter": [],
+  "paneRelief": false
+}

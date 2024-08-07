@@ -1,0 +1,1 @@
+<% await tp.user.new_analysis(tp) -%>

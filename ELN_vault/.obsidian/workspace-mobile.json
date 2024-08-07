@@ -1,0 +1,140 @@
+{
+  "main": {
+    "id": "01eb2b0f073c9dfc",
+    "type": "split",
+    "children": [
+      {
+        "id": "d763859991f83ba0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f83dcb8f1b618e5a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Home.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b9a8ab32b0441eee",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "276637e24f7cacb8",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "e7d717d54a16f98e",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "23061dadf80086c9",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "8716af96bdb2a76c",
+        "type": "leaf",
+        "state": {
+          "type": "starred",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "861ffb290f013131",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "59884dafa7357ade",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "Home.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "197aa4d2e6f96a38",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "Home.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "0d1e4afa5b7eedba",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "Home.md"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "f83dcb8f1b618e5a",
+  "lastOpenFiles": [
+    "Home.md",
+    "Kanban Test.md",
+    "Bewerbungsgespräche/Lars Esmezjan.md",
+    "Bewerbungsgespräche/Bewerbungsgespräche.md",
+    "Bewerbungsgespräche/Evangelos Tsagkarakis.md",
+    "Bewerbungsgespräche/Cordula Aurelia Vlaic.md",
+    "Obsidan/Obsidian Video tutorials.md",
+    "Development/Python/add an index column to a multi-index.md",
+    "Development/Python/Pandas - Indices.md",
+    "Development/Python/pandas series.md"
+  ]
+}

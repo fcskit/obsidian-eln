@@ -1,0 +1,183 @@
+/* obsidian page styles */
+body {
+    --page-width: 55rem;
+}
+
+.theme-light {
+    /* --background-navbar: #dfeae9; */
+    --background-navbar: var(--background-primary);
+    --background-dropdown: var(--background-secondary);
+}
+
+.theme-dark {
+    --background-navbar: #4b635f;
+    --background-dropdown: var(--background-navbar);
+}
+
+.paragraph-justify p {
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    text-align: justify !important;
+}
+
+.wide-page {
+    --page-width: calc(95% - var(--file-margins) - 28px) !important;
+}
+
+.wide-page .is-live-preview {
+    --page-width: 100% !important;
+}
+
+.markdown-preview-view {
+    padding-top: 0px;
+}
+
+/* Navbar container */
+.navbar {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--background-navbar);
+    /* shadow bottom 
+    box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2); */
+    margin-bottom: 3rem;
+    font-size: 0.9rem;
+}
+
+/* The dropdown container */
+.navbar-dropdown {
+    float: left;
+    overflow: hidden;
+    padding: 7px 0px;
+}
+
+/* Dropdown button */
+.navbar-dropdown .dropbtn {
+    font-size: inherit;
+    font-weight: 500;
+    border: none;
+    border-radius: 0px;
+    width: 100%;
+    outline: none;
+    color: var(--text-muted);
+    padding: 14px 16px;
+    background-color: inherit;
+    /* Important for vertical align on mobile phones */
+    margin: 0;
+    /* Important for vertical align on mobile phones */
+    /* no outline */
+    outline: none;
+    box-shadow: none;
+
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover,
+.navbar-dropdown:hover .dropbtn {
+    color: var(--link-color);
+    background-color: var(--background-dropdown);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--background-dropdown); 
+    /* background-color: var(--background-secondary); */
+    width: var(--page-width);
+    left: calc((100% - var(--page-width))/2);
+    min-height: 15rem;
+    padding: 1rem 5rem;
+    box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Mega Menu header, if needed */
+.dropdown-content .header {
+    background: inherit;
+    padding: 16px;
+    color: var(--text-muted);
+}
+
+/* Links inside the navbar */
+.navbar a.internal-link {
+    float: left;
+    font-size: inherit;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 11px 16px 7px 16px;
+    text-decoration: none;
+}
+
+.navbar-dropdown a.internal-link {
+    font-size: 0.9rem;
+    text-align: left;
+    width: 100%;
+    padding: 2px 0px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a.internal-link {
+    float: none;
+    color: var(--text-normal);
+    padding: 0.2rem 0rem;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Style links inside the columns */
+.navmenu-column a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: var(--tag-background);
+}
+
+/* Show the dropdown menu on hover */
+.navbar-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar h3 {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: var(--text-muted);
+    padding: 2px 0px;
+    text-align: left;
+}
+
+div.navmenu-header > h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    padding: 2px 0px;
+    text-align: left;
+}
+/* Create three equal columns that floats next to each other */
+.navmenu-column {
+    float: left;
+    width: 15rem;
+    padding-bottom: 1rem;
+}
+
+
+
+/* Clear floats after the columns */
+.navmenu-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.popover.hover-popover {
+    margin: 0rem 5rem;
+    position: absolute;
+}
