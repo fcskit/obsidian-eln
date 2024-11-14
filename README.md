@@ -17,9 +17,9 @@ Additional templates help you collect meeting notes, create daily notes, to-do l
 
 1. Download Obsidian from [obsidian.md] (https://obsidian.md) and install it on your computer.
 2. Get a copy of this vault by clicking on the latest version on the right side of this Github page. On the version page, download the Source.zip file and unzip it on your computer.
-3. Move the vault folder and rename it to your liking.
-4. Open Obsidian. In the "Manage vaults" dialog, select the "Open folder as vault" option. Navigate to the folder where you unzipped or moved the Obsidian ELN vault, select its root folder and open it in Obsidian.
-5. Since Obsidian ELN uses some community plugins to realize its functionality, Obsidian will warn you and ask you if you trust the author and want to activate the plugins. Please confirm the activation of the plugins. If you refuse to activate the plugins, the ELN will not work properly. You can also download the plugins and install them manually. However, this is not recommended as the plugins included in the vault are pre-configured to ensure seamless use. If the plugins were installed manually, they would be installed with their default settings and may not work as expected.
+3. Locate the ELN_vault folder and move it to a destination of choice. Rename it to your liking if you want.
+4. Open Obsidian. In the "Manage vaults" dialog, select the "Open folder as vault" option. Navigate to the folder where you unzipped or moved the Obsidian ELN_vault folder. Select and open it as vault in Obsidian.
+5. Since Obsidian ELN uses some community plugins to realize its functionality, Obsidian will warn you and ask you if you trust the author and want to activate the plugins. Please confirm the activation of the plugins. If you refuse to activate the plugins, the ELN will not work properly. You can also download the plugins and install them manually. However, this is not recommended as the plugins included in the vault are pre-configured to ensure seamless use. If the plugins were installed manually, they would be installed with their default settings and may not work as expected. *If you are not promted to trust the author of the vault and to activate the plugins, you probably selected the folder the GitHub archive was extracted to but not the acual vault folder, which is named ELN_vault by default as described above.*
 6. Read the file `Obsidian ELN - Getting Started` to learn more about using the ELN.
 
 
