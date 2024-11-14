@@ -74,6 +74,10 @@ To install the application, run:
 
 `pip install obsELN`
 
+The application installes as a pyhton module and can be launched by:
+
+`python -m obsELN`
+
 ### Home Dashboard
 
 Obsidian ELN has a dashboard in the form of a HOME note that allows you to easily navigate through your vault. Some of the tiles update their content automatically using the Dataview plugin and display, for example, your latest daily notes or active projects.
