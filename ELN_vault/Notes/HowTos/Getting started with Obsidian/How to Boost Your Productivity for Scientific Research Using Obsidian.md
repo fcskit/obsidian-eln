@@ -1,7 +1,11 @@
 ---
+ELN version: 0.5.0
+cssclass: note
+author: Leonardo Castorina
 source: https://betterhumans.pub/how-to-boost-your-productivity-for-scientific-research-using-obsidian-fe85c98c63c8
-type: article
-tags: tutorial
+note type: article
+tags: 
+  - " #tutorial "
 ---
 
 ## Tools and workflows for managing your zettelkasten, projects, reading lists, notes, and inspiration during your PhD.

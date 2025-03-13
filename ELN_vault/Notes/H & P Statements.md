@@ -1,9 +1,6 @@
 ---
-# Layout / Styling
+ELN version: 0.5.0
 cssclass: wide-page
-# Navigation
-parent: "[[Chemicals]]"
-# Note Information
 date created: 2023-03-07
 author: Frieder Scheiba
 note type: safety information
@@ -11,7 +8,9 @@ source: wikipedia.org
 tags: safety/statements
 ---
 
-TOP: `$=dv.current().file.frontmatter['parent']`
+```dataviewjs
+await dv.view("/assets/javascript/dataview/views/navbar", {});
+```
 
 > [!Example] TOC
 > **[[#H-Statements]]**
@@ -403,3 +402,7 @@ TOP: `$=dv.current().file.frontmatter['parent']`
 | P308+P310           | Bei Exposition oder falls betroffen: Sofort Giftinformationszentrum, Arzt oder … anrufen. (Die vom Gesetzgeber offen gelassene Einfügung ist vom Inverkehrbringer zu ergänzen. Keine offizielle P-Satz-Kombination)                                              | S 45           |
 | P309+P310           | Bei Exposition oder Unwohlsein: Sofort Giftinformationszentrum, Arzt oder … anrufen. (Die vom Gesetzgeber offen gelassene Einfügung ist vom Inverkehrbringer zu ergänzen. Keine offizielle P-Satz-Kombination)                                                   | S 45           |
 
+
+```dataviewjs
+await dv.view("/assets/javascript/dataview/views/note_footer", {});
+```

@@ -1,3 +1,23 @@
+function get_property() {
+  if (arguments.length >= 2) {
+    var obj = arguments[0];
+    const keys = Array.from(arguments).slice(1);
+    for (var i in keys) {
+      if (obj.hasOwnProperty(keys[i])) {
+        obj = obj[keys[i]];
+      } else {
+        console.log(`Property "${keys[i]}" not found in object.`);
+        return null;
+      }
+    }
+    return obj;
+  }
+  else {
+    console.log('Function get_property requires at least two arguments.');
+    return null;
+  }
+}
+
 async function new_daily_note(tp, return_type, out_folder) {
   const path = require('path');
 
@@ -18,13 +38,8 @@ async function new_daily_note(tp, return_type, out_folder) {
     console.log(`Folder "daily notes" not found in ELN settings. Using default folder "${folder_daily_notes}"`);
   }
   /**********************************************************************************/
-  var author = '';
-  try {
-    author = eln_settings.note.author;
-  }
-  catch (error) {
-    console.log(`note.author not found in ELN settings.`);
-  }
+  // get author
+  const author = await tp.user.get_author(tp);
   // get current date and format it to ISO 8601
   const date = new Date();
   const date_created = date.toISOString().split('T')[0];
@@ -54,13 +69,13 @@ tag:
 await dv.view("/assets/javascript/dataview/views/navbar", {});
 \`\`\`
 
-\`\`\`dataviewjs
-  await dv.view("/assets/javascript/dataview/views/daily_note_nav", {});
-\`\`\`
-
 <div class="title" style="color:#edf">
   ${note_title}
 </div>
+
+\`\`\`dataviewjs
+  await dv.view("/assets/javascript/dataview/views/daily_note_nav", {});
+\`\`\`
 
 # Daily Note - ${note_title}
 

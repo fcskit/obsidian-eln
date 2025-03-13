@@ -4,11 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "88a6a9ec7f63fbc2",
+        "id": "c54e130139c2ea09",
         "type": "tabs",
         "children": [
           {
-            "id": "7b692bea40b3b8de",
+            "id": "26362c947c84defb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Quick Start Guide.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Quick Start Guide"
+            }
+          },
+          {
+            "id": "88ecd175a9696e95",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -16,7 +30,37 @@
                 "file": "Home.md",
                 "mode": "preview",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Home"
+            }
+          },
+          {
+            "id": "7661b11b86293700",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/HowTos/Getting started with Obsidian/File Export.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "File Export"
+            }
+          },
+          {
+            "id": "94b36f186e23024c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "assets/ELN Settings.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ELN Settings"
             }
           }
         ]
@@ -38,8 +82,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Dateiexplorer"
             }
           },
           {
@@ -48,13 +95,15 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "[\"author\"]",
+                "query": "tag:note",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Suchen"
             }
           },
           {
@@ -62,7 +111,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Lesezeichen"
             }
           },
           {
@@ -70,7 +121,9 @@
             "type": "leaf",
             "state": {
               "type": "mk-file-view",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Erweiterung ist nicht mehr aktiv"
             }
           },
           {
@@ -78,14 +131,16 @@
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Erweiterung ist nicht mehr aktiv"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 339.5
+    "width": 324.5024719238281
   },
   "right": {
     "id": "6d4b2d9d326b3aaa",
@@ -101,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Home.md",
+                "file": "Notes/HowTos/Obsidian ELN/Obsidian ELN Python App.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +164,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Rückverweise für Obsidian ELN Python App"
             }
           },
           {
@@ -118,10 +175,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Home.md",
+                "file": "Notes/HowTos/Obsidian ELN/Obsidian ELN Python App.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Ausgehende Links von Obsidian ELN Python App öffnen"
             }
           },
           {
@@ -132,7 +191,9 @@
               "state": {
                 "sortOrder": "alphabetical",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -141,8 +202,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Home.md"
-              }
+                "file": "Experiments/Samples/Demo Project/electrode/MM-DP-el001.md"
+              },
+              "icon": "lucide-list",
+              "title": "Gliederung von MM-DP-el001"
             }
           },
           {
@@ -154,7 +217,9 @@
                 "sortOrder": "frequency",
                 "showSearch": false,
                 "searchQuery": ""
-              }
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
             }
           },
           {
@@ -163,16 +228,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Home.md"
-              }
-            }
-          },
-          {
-            "id": "0a629b3abc458985",
-            "type": "leaf",
-            "state": {
-              "type": "modal-form-manage-forms-view",
-              "state": {}
+                "file": "Quick Start Guide.md"
+              },
+              "icon": "lucide-info",
+              "title": "Dateieigenschaften von Quick Start Guide"
             }
           }
         ],
@@ -180,8 +239,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 371.5,
-    "collapsed": true
+    "width": 380.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,59 +253,57 @@
       "audio-recorder:Audioaufzeichnung starten/stoppen": false,
       "workspaces:Workspace-Layouts verwalten": false,
       "templater-obsidian:Templater": false,
-      "homepage:Open homepage": false,
-      "obsidian-advanced-slides:Show Slide Preview": false,
-      "modalforms:Edit forms": false
+      "homepage:Open homepage": false
     }
   },
-  "active": "7b692bea40b3b8de",
+  "active": "26362c947c84defb",
   "lastOpenFiles": [
-    "Resources/Labs/Building XXX/Lab BXXX - R1xx.md",
-    "Experiments/Processes/cell assembly/Dummy Process.md",
-    "Resources/Cells/Pouch Cell 5x5.md",
-    "Experiments/Processes/calcination/Calcination.md",
-    "Resources/Cells/Swagelok 3-electrode cell.md",
-    "Resources/Cells/Coin Cell CR2032.md",
-    "Resources/Electrodes/Reference/Standard Calomel (3.5M KCl) Reference.md",
-    "Resources/Chemicals/current collector/Aluminium Current Collector 12 µm - B01.md",
-    "Resources/Electrodes/Reference/Lithium Metal Reference.md",
-    "Resources/Instruments/ZEISS - Merlin/ZEISS - Merlin.md",
-    "Resources/Devices/MTI - MSK-110 - Hydraulic Coin Cell Crimper/MTI - MSK-110 - Hydraulic Coin Cell Crimper.md",
-    "Resources/Labs/Building XXX/Lab B421 - R109.md",
-    "Resources/Instruments/ZEISS - Merlin/Documents/Zeiss-SmartSEM-software-manual.pdf",
-    "Resources/Instruments/ZEISS - Merlin/Documents/Zeiss-MERLIN_Brochure.pdf",
-    "Resources/Instruments/BioLogic - VMP 221/BioLogic - VMP 221.md",
-    "Contacts/Joe Public.md",
-    "assets/Analysis Settings.md",
-    "Lists/Labs.md",
-    "Lists/Analyses.md",
-    "Home.md",
-    "Tasks/My Tasks.md",
-    "Daily Notes/2024/07 Juli/2024-07-31 - Mittwoch, 31. Juli.md",
-    "Daily Notes/2024/07 Juli/2024-07-30 - Dienstag, 30. Juli.md",
-    "assets/javascript/dataview/views/circular_progress.js",
-    "assets/templates/New Task List.md",
-    "assets/javascript/dataview/views/progress_circle.js",
-    "assets/javascript/dataview/views/daily_note_nav Kopie.js",
-    "Tasks/test tasks.md",
-    "Tasks/ELN Development Tasks.md",
     "assets/ELN Settings.md",
-    "Tasks",
-    "assets/templates/Custom Templates/Custom Sample Template.md",
-    "assets/javascript/templater/new_task_list.js",
-    "assets/javascript/templater/new_process Kopie.js",
-    "Resources/Instruments/HORIBA - LabRAM HR Evolution/Documents/Horiba-LabRam HR-Evolution.png",
-    "Resources/Instruments/ZEISS - Merlin/Documents/ZEISS_MERLIN_FE-SEM.jpg",
-    "Resources/Instruments/HORIBA - LabRAM HR Evolution/Documents/LabSpec6_-_Reference_Manual-2.pdf",
-    "Resources/Instruments/HORIBA - LabRAM HR Evolution/Documents/horiba_scientific_labram_hr_evolution_raman_spectrometer_manual.pdf",
-    "Resources/Instruments/BioLogic - VMP 221/Documents/biologic_vmp3_potentiostat.png",
-    "assets/images/Motivation/start your day with a smile.png",
+    "Quick Start Guide.md",
+    "Experiments/Processes/cell assembly/Dummy Process.md",
+    "Home.md",
+    "Notes/HowTos/Visual Studio Code/Install Visual Studio Code.md",
+    "Lists/ELN Note Versions.md",
+    "ELN Dashboard.md",
+    "Notes/HowTos/Obsidian ELN/Obsidian ELN Python App.md",
+    "assets/templates/DataView Queries/DV Sample SEM Analysis.md",
+    "assets/templates/DataView Queries/DV Sample Raman Analysis.md",
+    "assets/templates/DataView Queries/DV Sample GCPL Analysis.md",
+    "assets/templates/DataView Queries/DV Open Tasks.md",
+    "assets/templates/DataView Queries/DataView Inline Queries.md",
+    "Notes/HowTos/Obsidian ELN/Obsidian ELN - Getting started.md",
+    "Notes/HowTos/Getting started with Obsidian/Markdown Formatting Guide.md",
+    "Notes/HowTos/Getting started with Obsidian/Obsidian Plugin Documentation/Banners.md",
+    "Notes/HowTos/Getting started with Obsidian/emoji shortcodes.md",
+    "Notes/HowTos/Getting started with Obsidian/Get started with Obsidian.md",
+    "Notes/HowTos/Getting started with Obsidian/Obsidian Tutorial for Academic Writing.md",
+    "Notes/H & P Statements.md",
+    "Notes/HowTos/Getting started with Obsidian/Obsidian Video tutorials.md",
+    "Notes/HowTos/Getting started with Obsidian/How to Boost Your Productivity for Scientific Research Using Obsidian.md",
+    "Notes/HowTos/Getting started with Obsidian/Obsidian Dashboard.md",
+    "Notes/HowTos/Getting started with Obsidian/Obsidian Plugin Documentation/Dataview.md",
+    "Notes/HowTos/Obsidian ELN/Install Python.md",
+    "Notes/HowTos/Getting started with Obsidian/Obsidian Plugin Documentation/Obsidian Plugin Documentation.md",
+    "Notes/HowTos/Getting started with Obsidian/images/Pasted image 20250313150143.png",
+    "Notes/HowTos/Getting started with Obsidian/images",
+    "Daily Notes/2025/03 März",
+    "Daily Notes/2025",
+    "assets/javascript/dataview/views/test.js",
+    "assets/javascript/dataview/views/sample.js",
+    "assets/javascript/dataview/views/properties.js",
+    "assets/javascript/dataview/views/process.js",
+    "assets/javascript/dataview/views/note_header.js",
+    "assets/javascript/dataview/views/note_footer.js",
+    "assets/javascript/dataview/views/navbar.js",
+    "assets/images/Motivation/make_the_days_count.png",
+    "assets/images/Motivation/wind_it_up.png",
+    "assets/images/Motivation/pave_a_new_road.png",
     "assets/images/Motivation/start_with_a_smile.png",
-    "Experiments/Analyses/Demo Project/VM-DP-el001/SE_thorny_01/VM-DP-el001 - SE_thorny_01.jpg",
-    "Experiments/Analyses/Demo Project/MM-DP-cp001/GCPL_02/plots/MM-DP-cp001 - GCPL_02_dq_dv_vs_v.svg",
-    "Experiments/Analyses/Demo Project/MM-DP-cp001/GCPL_02/plots/MM-DP-cp001 - GCPL_02_dq_dv_vs_v.png",
-    "Experiments/Analyses/Demo Project/MM-DP-cp001/GCPL_02/plots/MM-DP-cp001 - GCPL_02_v_vs_cap.svg",
-    "Experiments/Analyses/Demo Project/MM-DP-cp001/GCPL_02/plots/MM-DP-cp001 - GCPL_02_v_vs_cap.png",
+    "assets/images/Motivation/impossible_until_it_is_done.png",
+    "assets/images/Motivation/face_towards_sunshine.png",
+    "assets/images/Motivation/attitude_is_a_little_thing.png",
+    "assets/images/People/Liuda-Mereacre.jpg",
+    "assets/images/People/Dummy-Contact-Icon.png",
     "Unbenannt.canvas"
   ]
 }

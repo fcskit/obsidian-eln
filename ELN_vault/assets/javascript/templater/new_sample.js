@@ -1,32 +1,3 @@
-// const { get } = require('http');
-
-function addProperty(obj, key, value, position = 0) {
-    var new_obj = {};
-    var counter = 0;
-    for (var prop in obj) {
-        if (counter === position) {
-            new_obj[key] = value;
-            counter++;
-        }
-        new_obj[prop] = obj[prop];
-        counter++;
-    }
-    // in case position exceeds the number of properties in obj, 
-    // add new key at the end
-    if (!(key in new_obj)) {
-        new_obj[key] = value;
-    }
-    return new_obj;
-}
-
-function get_property(obj, key) {
-    if (key in obj) {
-        return obj[key];
-    } else {
-        return null;
-    }
-}
-
 async function get_sample_properties(tp) {
   /**********************************************************************************/
   /* Compose metadata information for sample with user interaction                  */
@@ -46,43 +17,17 @@ async function get_sample_properties(tp) {
   const folder_custom_templates = eln_settings.folder['custom templates']
 
   // get author name from settings
-  var author = '';
-  try {
-    author = eln_settings.note.author;
-  }
-  catch (error) {
-    console.log(`note.author not found in ELN settings.`);
-  }
+  const author = await tp.user.get_author(tp);
   // get current date and format it to ISO 8601
   const date = new Date();
   const date_created = date.toISOString().split('T')[0];
   /**********************************************************************************/
   /*                           LET USER SELECT OPERATOR                             */
   /**********************************************************************************/
-  const dv_operators = eln_settings.operators
+  const operator = await tp.user.get_operator(tp);
 
-  if (dv_operators instanceof Object) {
-    const operator_list = Object.keys(dv_operators)
-    if (operator_list.length == 1) {
-        operator = operator_list[0]
-    } else if (operator_list.length > 1) {
-        operator = await tp.system.suggester(operator_list, operator_list, false, 'Select operator:')
-    } else {
-        operator = '~~'
-    }
-  } else {
-    operator = '~~'
-  }
-
-  // get initials for selected operator
-  var operator_initials = 'NN'
-
-  console.log(JSON.stringify(eln_settings.operators))
-  console.log(JSON.stringify(eln_settings.operators[operator]))
-  if (operator !== '~~') {
-    operator_initials = eln_settings.operators[operator].initials
-  }
-
+  const operator_name = operator.name;
+  const operator_initials = operator.initials;
   /**********************************************************************************/
   // obtain LIST of exsiting PROJECTS
   const project_list = app.plugins.plugins.dataview.api
@@ -147,7 +92,7 @@ async function get_sample_properties(tp) {
   } else {
     sample_type_abbrev = 'sp'
   }
-  var default_sample_name_base = operator_initials + "-" + project_abbrev + "-" + sample_type_abbrev
+  var default_sample_name_base = operator.initials + "-" + project_abbrev + "-" + sample_type_abbrev
   const sample_output_folder = folder_samples + "/" + project_name + "/" + sample_type
   var counter = 1
   while (true) {
@@ -342,7 +287,8 @@ async function get_sample_properties(tp) {
     if (selection !== '') {
       amount = await tp.system.prompt(amount_prompt, '')
     }
-    sample_type_dv_obj['active material']['name'] = `"[[${selection}]]"`
+    sample_type_dv_obj['active material']['name'] = selection
+    sample_type_dv_obj['active material']['link'] = `"[[${selection}]]"`
     sample_type_dv_obj['active material']['mass'] = amount
 
     // Select electrode BINDER
@@ -369,7 +315,8 @@ async function get_sample_properties(tp) {
       for (let binder of binder_selection) {
         amount = await tp.system.prompt(`Enter mass of ${binder} with unit separated by a blank space:`, '')
         sample_type_dv_obj['binder'].push({
-          name: `"[[${binder}]]"`,
+          name: binder,
+          link: `"[[${binder}]]"`,
           mass: amount
         })
       }
@@ -415,7 +362,8 @@ async function get_sample_properties(tp) {
       for (let additive of additive_selection) {
         amount = await tp.system.prompt(`Enter mass of ${additive} with unit separated by a blank space:`, '')
         sample_type_dv_obj['conductive additive'].push({
-          name: `"[[${additive}]]"`,
+          name: additive,
+          link: `"[[${additive}]]"`,
           mass: amount
         })
       }
@@ -448,7 +396,8 @@ async function get_sample_properties(tp) {
       for (let solvent of solvent_selection) {
         amount = await tp.system.prompt(`Enter volume of ${solvent} with unit separated by a blank space:`, '')
         sample_type_dv_obj['solvent'].push({
-          name: `"[[${solvent}]]"`,
+          name: solvent,
+          link: `"[[${solvent}]]"`,
           volume: amount
         })
       }
@@ -502,9 +451,10 @@ async function get_sample_properties(tp) {
       width = await tp.system.prompt(width_prompt, '')
       length = await tp.system.prompt(length_prompt, '')
     }
-    sample_type_dv_obj['current collector']['name'] = `"[[${selection}]]"`
-    sample_type_dv_obj['current collector']['width'] = width
-    sample_type_dv_obj['current collector']['length'] = length
+    sample_type_dv_obj['current collector']['name'] = selection;
+    sample_type_dv_obj['current collector']['link'] = `"[[${selection}]]"`;
+    sample_type_dv_obj['current collector']['width'] = width;
+    sample_type_dv_obj['current collector']['length'] = length;
 
     /*********************************************************************************/
     /*                        ELECTROCHEMICAL CELL Samples                           */
@@ -579,7 +529,8 @@ async function get_sample_properties(tp) {
     // // add copy of cell meta data to sample_type_dv_obj
     // sample_type_dv_obj['cell'] = selection_meta['cell']
     // sample_type_dv_obj['cell'] = addProperty(sample_type_dv_obj['cell'], 'name', `"[[${selection}]]"`, 0)
-    sample_type_dv_obj['cell']['name'] = `"[[${selection}]]"`;
+    sample_type_dv_obj['cell']['name'] = selection;
+    sample_type_dv_obj['cell']['link'] = `"[[${selection}]]"`;
     sample_type_dv_obj['cell']['type'] = cell_type;
       
     // Let user select WORKING ELECTRODE
@@ -597,13 +548,15 @@ async function get_sample_properties(tp) {
       const am_mass = await tp.system.prompt('Enter mass of active material with unit separated by a blank space:', '')
       // let user enter total mass of working electrode
       const total_mass = await tp.system.prompt('Enter total mass of working electrode with unit separated by a blank space:', '')
-      sample_type_dv_obj['working electrode']['name'] = `"[[${we_electrode}]]"`
+      sample_type_dv_obj['working electrode']['name'] = we_electrode
+      sample_type_dv_obj['working electrode']['link'] = `"[[${we_electrode}]]"`
       sample_type_dv_obj['working electrode']['active material mass'] = am_mass
       sample_type_dv_obj['working electrode']['total mass'] = total_mass
       sample_type_dv_obj['working electrode']['area'] = electrode_area
     }
     else {
       sample_type_dv_obj['working electrode']['name'] = '~~'
+      sample_type_dv_obj['working electrode']['name'] = '[[~~]]'
       sample_type_dv_obj['working electrode']['active material mass'] = '~~'
       sample_type_dv_obj['working electrode']['total mass'] = '~~'
       sample_type_dv_obj['working electrode']['area'] = electrode_area
@@ -630,7 +583,8 @@ async function get_sample_properties(tp) {
         ce_electrode = await tp.system.suggester(electrode_list, electrode_list, false, 'Select counter electrode:')
       }
     }
-    sample_type_dv_obj['counter electrode']['name'] = `"[[${ce_electrode}]]"`
+    sample_type_dv_obj['counter electrode']['name'] = ce_electrode;
+    sample_type_dv_obj['counter electrode']['link'] = `"[[${ce_electrode}]]"`;
 
     // Let user select REFERENCE ELECTRODE
     const ref_electrode_list = app.plugins.plugins.dataview.api
@@ -655,8 +609,9 @@ async function get_sample_properties(tp) {
       const ref_electrode_meta = DataviewAPI.page(tp.file.find_tfile(selection).path)
       amount = ref_electrode_meta['standard electrode potential']
     }
-    sample_type_dv_obj['reference electrode']['name'] = `"[[${selection}]]"`
-    sample_type_dv_obj['reference electrode']['potential'] = amount
+    sample_type_dv_obj['reference electrode']['name'] = selection;
+    sample_type_dv_obj['reference electrode']['link'] = `"[[${selection}]]"`;
+    sample_type_dv_obj['reference electrode']['potential'] = amount;
 
     // Let user select ELECTROLYTE
     const electrolyte_list = app.plugins.plugins.dataview.api
@@ -685,9 +640,10 @@ async function get_sample_properties(tp) {
       composition = electrolyte_meta.chemical.composition
       amount = await tp.system.prompt(amount_prompt, '')
     }
-    sample_type_dv_obj['electrolyte']['name'] = `"[[${selection}]]"`
-    sample_type_dv_obj['electrolyte']['composition'] = composition
-    sample_type_dv_obj['electrolyte']['volume'] = amount
+    sample_type_dv_obj['electrolyte']['name'] = selection;
+    sample_type_dv_obj['electrolyte']['link'] = `"[[${selection}]]"`;
+    sample_type_dv_obj['electrolyte']['composition'] = composition;
+    sample_type_dv_obj['electrolyte']['volume'] = amount;
 
     // Let user select SEPARATOR
     const separator_list = app.plugins.plugins.dataview.api
@@ -716,9 +672,10 @@ async function get_sample_properties(tp) {
       property = selection_meta.chemical.properties.thickness
       amount = await tp.system.suggester(['1 layer', '2 layers', '3 layers', '4 layers'], [1, 2, 3, 4], false, amount_prompt)
     }
-    sample_type_dv_obj['separator']['name'] = `"[[${selection}]]"`
-    sample_type_dv_obj['separator']['thickness'] = property
-    sample_type_dv_obj['separator']['layers'] = amount
+    sample_type_dv_obj['separator']['name'] = selection;
+    sample_type_dv_obj['separator']['link'] = `"[[${selection}]]"`;
+    sample_type_dv_obj['separator']['thickness'] = property;
+    sample_type_dv_obj['separator']['layers'] = amount;
   }
 
   /*********************************************************************************/
@@ -800,7 +757,7 @@ async function get_sample_properties(tp) {
     folder_custom_templates,
     author,
     date_created,  
-    operator,
+    operator_name,
     operator_initials,
     project_name,
     sample_type,
@@ -867,20 +824,23 @@ class accent-button
 ## Properties
 
 \`\`\`dataviewjs
-await dv.view("/assets/javascript/dataview/views/sample", {});
+await dv.view("/assets/javascript/dataview/views/sample", { obsidian: obsidian });
 \`\`\`
 
 ## Processing
 
+**Open process description**
 ${sample_properties.processes.map(p => `- [[${p}]]`).join('\n')}
+
 \`\`\`dataviewjs
-await dv.view("/assets/javascript/dataview/views/process", { key: "process" });
+await dv.view("/assets/javascript/dataview/views/process", { obsidian: obsidian });
 \`\`\`
 
 
 ## My Notes
 
-${tp.file.include(tp.file.find_tfile(sample_properties.folder_custom_templates + "/Custom Sample Template"))}
+> [!Info]
+> Add your notes for this sample here.
 
 ## Characterization
 

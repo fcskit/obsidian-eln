@@ -19,13 +19,7 @@ async function new_project(tp, return_type, out_folder) {
     return;
   }
   /**********************************************************************************/
-  var author = '';
-  try {
-    author = eln_settings.note.author;
-  }
-  catch (error) {
-    console.log(`note.author not found in ELN settings.`);
-  }
+  const author = await tp.user.get_author(tp);
   // get current date and format it to ISO 8601
   const date = new Date();
   const date_created = date.toISOString().split('T')[0];

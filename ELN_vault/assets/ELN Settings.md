@@ -1,13 +1,14 @@
 ---
-ELN version: 0.4.2
+ELN version: 0.5.0
 note:
-  author: Name Surname
-  initials: NN
+  author:
+    - name: Name Surname
+      initials: NN
 operators:
-  Max Mustermann: 
-    initials: MM
-  Vera Musterfrau:
-    initials: VM
+  - name: Nick Nobody
+    initials: NN
+  - name: Anne Anybody
+    initials: AA
 folder:
   local data: /path/to_your/local_data/folder
   remote data: /path/to_your/remote_data/folder
@@ -23,11 +24,11 @@ folder:
   meetings: Meetings
   tasks: Tasks
   templates: assets/templates
-  analysis methods: assets/templates/Analysis Methods
+  analysis methods: assets/Analysis Settings
   custom templates: assets/templates/Custom Templates
   dataview queries: assets/templates/DataView Queries
   mermaid charts: assets/templates/Mermaid Charts
-  sample types: assets/templates/Sample Types
+  sample types: assets/Sample Types
 chemical:
   type:
     - active material
@@ -143,25 +144,10 @@ analysis:
 ## Settings
 
 ```dataviewjs
-await dv.view("/assets/javascript/dataview/views/properties", { key: "note", header: "Note settings"  });
+await dv.view("/assets/javascript/dataview/views/properties", {obsidian: obsidian});
 ```
 
-```dataviewjs
-await dv.view("/assets/javascript/dataview/views/properties", { key: "operators", header: "Operator settings"  });
-```
 
 ```dataviewjs
-await dv.view("/assets/javascript/dataview/views/properties", { key: "folder", header: "Folder settings"  });
-```
-
-```dataviewjs
-await dv.view("/assets/javascript/dataview/views/properties", { key: "chemical", header: "Chemical settings"  });
-```
-
-```dataviewjs
-await dv.view("/assets/javascript/dataview/views/properties", { key: "device", header: "Device settings" });
-```
-
-```dataviewjs
-await dv.view("/assets/javascript/dataview/views/properties", { key: "instrument", header: "Instrument settings"  });
+console.log(this.name)
 ```

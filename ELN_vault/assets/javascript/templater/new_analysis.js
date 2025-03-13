@@ -1,3 +1,5 @@
+const { type } = require('os');
+
 function get_property() {
   if (arguments.length >= 2) {
     var obj = arguments[0];
@@ -36,7 +38,7 @@ async function new_analysis(tp, return_type, out_folder) {
   const folder_local_data = get_property(eln_settings, 'folder', 'local data');
   const folder_remote_data = get_property(eln_settings, 'folder', 'remote data');
   /**********************************************************************************/
-  const author = get_property(eln_settings, 'note', 'author');
+  const author = await tp.user.get_author(tp);
   // get current date and format it to ISO 8601
   const date = new Date();
   const date_created = date.toISOString().split('T')[0];
@@ -93,23 +95,8 @@ async function new_analysis(tp, return_type, out_folder) {
   /**********************************************************************************/
   /*                           LET USER SELECT OPERATOR                             */
   /**********************************************************************************/
-  const dv_operators = get_property(eln_settings, 'operators');
-  console.log(`operator_list: ${dv_operators}`);
-  console.log(`typeof operator_list: ${JSON.stringify(dv_operators)}`);
-
-  if (dv_operators instanceof Object) {
-    const operator_list = Object.keys(dv_operators)
-    if (operator_list.length == 1) {
-      operator = operator_list[1];
-    } else if (operator_list.length > 1) {
-      operator = await tp.system.suggester(
-        operator_list, operator_list, false, 'Select operator:');
-    } else {
-      operator = '~~';
-    }
-  } else {
-    operator = '~~';
-  }
+  const operator = await tp.user.get_operator(tp);
+  const operator_name = operator.name;
   /**********************************************************************************/
   /*                          LET USER SELECT INSTRUMENT                            */
   /**********************************************************************************/
@@ -183,7 +170,7 @@ session:
 analysis:
   method: ${analysis_method}
   date: ${date_created}
-  operator: ${operator}
+  operator: ${operator_name}
   status: ${status}
   data:
     local:
@@ -193,9 +180,9 @@ analysis:
       folder_link: "[local data folder](file://${(folder_local_data + "/" + sample_name + "/" + analysis_method).replace(/[\s]/g, '%20')})"
     remote:
       file: my_sample.xyz
-      folder: ${folder_remote_data}/${tp.date.now('YYYY')}/${analysis_method}/${operator}
-      link: "[remote data file](file://${(folder_remote_data + "/" + tp.date.now('YYYY') + "/" + analysis_method + "/" + operator).replace(/[\s]/g, '%20')})"
-      folder_link: "[remote data folder](file://${(folder_remote_data + "/" + tp.date.now('YYYY') + "/" + analysis_method + "/" + operator).replace(/[\s]/g, '%20')})"
+      folder: ${folder_remote_data}/${tp.date.now('YYYY')}/${analysis_method}/${operator_name}
+      link: "[remote data file](file://${(folder_remote_data + "/" + tp.date.now('YYYY') + "/" + analysis_method + "/" + operator_name).replace(/[\s]/g, '%20')})"
+      folder_link: "[remote data folder](file://${(folder_remote_data + "/" + tp.date.now('YYYY') + "/" + analysis_method + "/" + operator_name).replace(/[\s]/g, '%20')})"
   parameters: ${analysis_parameter_yaml}
 ---
 
@@ -208,7 +195,7 @@ await dv.view("/assets/javascript/dataview/views/note_header", {});
 \`\`\`
 
 \`\`\`dataviewjs
-await dv.view("/assets/javascript/dataview/views/analysis", {});
+await dv.view("/assets/javascript/dataview/views/analysis", {obsidian: obsidian});
 \`\`\`
 
 \`\`\`dataviewjs

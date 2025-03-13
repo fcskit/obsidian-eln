@@ -1,0 +1,175 @@
+/*
+ * ========================================================
+ * Format Figure Captions of the Image Captions Plugin
+ * ========================================================
+ */
+
+/* @settings
+name: Figure Captions Snippet
+id: figure-caption-snippet
+settings:
+
+# Colors
+
+    - 
+        id: daily-note-colors
+        title: Format daily-note colors
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: daily-note-card-bg-color
+        title: Color of daily-note cards
+        type: variable-themed-color
+        default-light: '#'
+        default-dark: '#'
+        format: 'rgb-values'
+    -
+        id: daily-note-h3-color
+        title: Color of H3 heading (Card title)
+        type: class-select
+        allowEmpty: true
+        default: daily-note-h3-mauve
+        options:
+            - 
+                label: Rosewater
+                value: daily-note-h3-rosewater
+            - 
+                label: Flamingo
+                value: daily-note-h3-flamingo
+            - 
+                label: Pink
+                value: daily-note-h3-pink
+            - 
+                label: Mauve
+                value: daily-note-h3-mauve
+            - 
+                label: Red
+                value: daily-note-h3-red
+            - 
+                label: Maroon
+                value: daily-note-h3-maroon
+            - 
+                label: Peach
+                value: daily-note-h3-peach
+            - 
+                label: Yellow
+                value: daily-note-h3-yellow
+            - 
+                label: Green
+                value: daily-note-h3-green
+            - 
+                label: Teal
+                value: daily-note-h3-teal
+            - 
+                label: Sky
+                value: daily-note-h3-sky
+            - 
+                label: Sapphire
+                value: daily-note-h3-sapphire
+            - 
+                label: Blue
+                value: daily-note-h3-blue
+            - 
+                label: Lavender
+                value: daily-note-h3-lavender
+    -
+        id: daily-note-bold-color
+        title: Color of bold text
+        type: class-select
+        allowEmpty: true
+        default: daily-note-bold-pink
+        options:
+            - 
+                label: Rosewater
+                value: daily-note-bold-rosewater
+            - 
+                label: Flamingo
+                value: daily-note-bold-flamingo
+            - 
+                label: Pink
+                value: daily-note-bold-pink
+            - 
+                label: Mauve
+                value: daily-note-bold-mauve
+            - 
+                label: Red
+                value: daily-note-bold-red
+            - 
+                label: Maroon
+                value: daily-note-bold-maroon
+            - 
+                label: Peach
+                value: daily-note-bold-peach
+            - 
+                label: Yellow
+                value: daily-note-bold-yellow
+            - 
+                label: Green
+                value: daily-note-bold-green
+            - 
+                label: Teal
+                value: daily-note-bold-teal
+            - 
+                label: Sky
+                value: daily-note-bold-sky
+            - 
+                label: Sapphire
+                value: daily-note-bold-sapphire
+            - 
+                label: Blue
+                value: daily-note-bold-blue
+            - 
+                label: Lavender
+                value: daily-note-bold-lavender
+*/
+
+.theme-light {
+    --figure-caption-bg-color: var(--tab-background-active);
+    --figure-caption-font-color: var(--text-normal);
+}
+
+.theme-dark {
+    --figure-caption-bg-color: var(--titlebar-background);
+    --figure-caption-font-color: var(--text-normal);
+}
+
+.theme-light .image-captions-figure,
+.theme-light .image-captions-caption {
+    background: var(--figure-caption-bg-color);
+}
+
+* {
+    --figure-caption-text-align: left;
+    --figure-caption-before-text: 'Figure';
+}
+
+/* Format figure caption to insert 'Figure $i' before the actual caption */
+figure {
+    counter-reset: figure;
+}
+
+figcaption.image-captions-caption {
+    counter-increment: figure;
+    font-size: 0.8em;
+    font-style: italic;
+    text-align: var(--figure-caption-text-align);
+    color: var(--figure-caption-font-color);
+    background-color: var(--figure-caption-bg-color);
+    padding: 0.5em;
+    margin: 0;
+}
+
+figcaption.image-captions-caption::before {
+    /* content: var(--figure-caption-before-text) ' ' counter(figure) ': '; */
+    content: var(--figure-caption-before-text) ' X: ';
+    font-weight: bold;
+}
+
+.pandoc .el-p.el-embed-image {
+    color: var(--text-faint);
+}
+
+.pandoc div.cm-line:has(div.internal-embed.media-embed.image-embed.is-loaded) {
+    color: var(--text-faint);
+}

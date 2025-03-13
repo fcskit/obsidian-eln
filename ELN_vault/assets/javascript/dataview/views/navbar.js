@@ -12,7 +12,8 @@ if (input && dv) {
   const header = dv.el("div", "", { cls: "eln-navbar", attr: { id: "navbar-container" } });
   // const reference_element = header.parentElement.parentElement;
   
-  const note_name = dv.current().file.name
+  // const active_note = app.workspace.getActiveFile();
+  // const note_name = active_note.basename;
   const navbar = document.createElement("div");
   navbar.classList.add("navbar");
   // const navbar_link = document.createElement("a");

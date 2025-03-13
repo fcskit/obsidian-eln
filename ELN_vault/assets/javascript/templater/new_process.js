@@ -26,13 +26,7 @@ async function new_process(tp, return_type, out_folder) {
     console.log(`folder.devices not found in ELN settings. Using default folder "Resources/Devices"`);
   }
   /**********************************************************************************/
-  var author = '';
-  try {
-    author = eln_settings.note.author;
-  }
-  catch (error) {
-    console.log(`note.author not found in ELN settings.`);
-  }
+  const author = await tp.user.get_author(tp);
   // get current date and format it to ISO 8601
   const date = new Date();
   const date_created = date.toISOString().split('T')[0];
@@ -137,7 +131,7 @@ await dv.view("/assets/javascript/dataview/views/note_header", {});
 \`\`\`
 
 \`\`\`dataviewjs
-await dv.view("/assets/javascript/dataview/views/process", {});
+await dv.view("/assets/javascript/dataview/views/process", {obsidian: obsidian});
 \`\`\`
 
 ## Process Description

@@ -1,10 +1,12 @@
 ---
-ELN version: 0.3.2
-cssclass: wide-page
+ELN version: 0.5.0
+cssclasses:
+  - wide-page
 date created: 2023-03-11
 author: Frieder Scheiba
 note type: daily-note-list
-tag: list/daily-note
+tags:
+  - list/daily-note
 ---
 
 ```dataviewjs

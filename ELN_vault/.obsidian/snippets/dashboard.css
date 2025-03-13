@@ -274,6 +274,16 @@ settings:
     max-width: 100%;
 }
 
+.dashboard.markdown-source-view.is-live-preview .title {
+    font-size: 30pt !important;
+    font-weight: 900;
+    text-shadow: 2px 2px 7px #83a4b9;
+    letter-spacing: 8px;
+    background-color: #421e55;
+    padding-top: 30px;
+    padding-left: 20px;
+    height: 150px;
+}
 /* Title at top of the document */
 .dashboard .markdown-preview-section .title {
     top: 60px;
@@ -428,6 +438,9 @@ ul.contains-task-list.plugin-tasks-query-result {
     background-color: var(--dashboard-card-bg-color);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+.dashboard .note-footer p {
+    width: 100%;
 }
 
 .dashboard div.HyperMD-list-line.HyperMD-list-line-1 {

@@ -19,13 +19,7 @@ async function new_chemical(tp, return_type, out_folder) {
     console.log(`folder.chemicals not found in ELN settings. Using default folder "${folder_chemicals}"`);
   }
   /**********************************************************************************/
-  var author = '';
-  try {
-    author = eln_settings.note.author;
-  }
-  catch (error) {
-    console.log(`note.author not found in ELN settings.`);
-  }
+  const author = await tp.user.get_author(tp);
   // get current date and format it to ISO 8601
   const date = new Date();
   const date_created = date.toISOString().split('T')[0];
@@ -34,12 +28,13 @@ async function new_chemical(tp, return_type, out_folder) {
   const chemical_type_list = eln_settings.chemical.type
   const chemical_type = await tp.system.suggester(chemical_type_list, chemical_type_list, false, 'Select type of chemical:')
   const tags_yaml = '\n  - " #chemical/' + chemical_type.replace(/\s/g, '_') + ' "\n';
-  const field_of_use_list = eln_settings.chemical['field of use']
+  // make field_of_use_list is a deep copy of eln_settings.chemical['field of use']
+  const field_of_use_list = JSON.parse(JSON.stringify(eln_settings.chemical['field of use']));
   const ms_settings = {
     prompt: 'Select field of use:',
     abort_string: 'Exit selection ...',
     list: field_of_use_list
-  }
+  };
   const field_of_use = await tp.user.multiple_selection(tp, ms_settings)
   // format field of use as yaml list
   const field_of_use_yaml = field_of_use.map(x => '\n    - "' + x + '"').join('')
@@ -116,7 +111,7 @@ await dv.view("/assets/javascript/dataview/views/note_header", {});
 \`\`\`
 
 \`\`\`dataviewjs
-await dv.view("/assets/javascript/dataview/views/chemical", {});
+await dv.view("/assets/javascript/dataview/views/chemical", {obsidian: obsidian});
 \`\`\`
 
 \`\`\`dataviewjs

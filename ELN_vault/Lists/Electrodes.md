@@ -1,10 +1,12 @@
 ---
-ELN version: 0.3.2
-cssclass: wide-page
+ELN version: 0.5.0
+cssclasses:
+  - wide-page
 date created: 2023-04-02
 author: Frieder Scheiba
 note type: electrode-list
-tag: list/electrodes
+tags:
+  - list/electrodes
 ---
 
 ```dataviewjs

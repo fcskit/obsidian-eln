@@ -16,41 +16,8 @@
           "lastUpdate": "2024-01-09T14:10:43Z"
         }
       ]
-    },
-    {
-      "repo": "https://github.com/fcskit/obsidian-eln-snippets",
-      "snippetsContents": [
-        {
-          "name": "analysis_note.css",
-          "lastUpdate": "2024-08-06T07:34:00Z"
-        },
-        {
-          "name": "circular_progress.css",
-          "lastUpdate": "2024-08-06T07:34:00Z"
-        },
-        {
-          "name": "daily-note.css",
-          "lastUpdate": "2024-08-06T07:34:00Z"
-        },
-        {
-          "name": "dashboard.css",
-          "lastUpdate": "2024-08-06T07:34:00Z"
-        },
-        {
-          "name": "obsidian_eln.css",
-          "lastUpdate": "2024-08-06T07:34:00Z"
-        },
-        {
-          "name": "page-styles.css",
-          "lastUpdate": "2024-08-06T07:34:00Z"
-        },
-        {
-          "name": "task-list.css",
-          "lastUpdate": "2024-08-06T07:34:00Z"
-        }
-      ]
     }
   ],
   "excludedSnippet": "",
-  "errorSnippet": ", UI-tweaks.csstask-list, "
+  "errorSnippet": ", UI-tweaks.css"
 }

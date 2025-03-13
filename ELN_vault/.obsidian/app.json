@@ -41,5 +41,5 @@
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "./images",
   "showInlineTitle": false,
-  "propertiesInDocument": "source"
+  "propertiesInDocument": "hidden"
 }

@@ -7,7 +7,7 @@
     font-family: 'Roboto', sans-serif; 
 }
 
-.cicularprogress body 
+.circularprogress body 
 {
     display: flex;
     justify-content: center;
@@ -16,7 +16,7 @@
     background: #222;
 }
 
-.cicularprogress
+.circularprogress
 {
     position: relative;
     display: flex;
@@ -26,7 +26,7 @@
     gap: 40px;
 }
 
-.cicularprogress .card 
+.circularprogress .card 
 {
     position: relative;
     width: 220px;
@@ -38,14 +38,14 @@
     border: 0px;
 }
 
-.cicularprogress .card .percent 
+.circularprogress .card .percent 
 {
     position: relative;
     width: 150px;
     height: 150px;
 }
 
-.cicularprogress .card .percent svg 
+.circularprogress .card .percent svg 
 {
     position: relative;
     width: 150px;
@@ -53,7 +53,7 @@
     transform: rotate(270deg);
 }
 
-.cicularprogress .card .percent svg circle 
+.circularprogress .card .percent svg circle 
 {
     width: 100%;
     height: 100%;
@@ -63,7 +63,7 @@
     transform: translate(5px,5px);   
 }
 
-.cicularprogress .card .percent svg circle:nth-child(2)
+.circularprogress .card .percent svg circle:nth-child(2)
 {
     stroke: var(--clr);
     stroke-dasharray: 440;
@@ -85,7 +85,7 @@
     }
 }
 
-.dot 
+.circularprogress .dot 
 {
     position: absolute;
     inset: 5px;
@@ -121,7 +121,7 @@
     box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
 }
 
-.cicularprogress .card .percent .number {
+.circularprogress .card .percent .number {
     position: absolute;
     inset: 0;
     display: flex;
@@ -132,7 +132,7 @@
     animation: fadeIn 1s linear forwards;
     animation-delay: 2.5s;}
 
-.cicularprogress .card .percent .number h2 
+.circularprogress .card .percent .number h2 
 {
     display: flex;
     justify-content: center;
@@ -142,7 +142,7 @@
     font-size: 2.5em;
 }
 
-.cicularprogress .card .percent .number h2 span
+.circularprogress .card .percent .number h2 span
 {
     font-weight: 300;
     color: #222;
@@ -150,7 +150,7 @@
 }
 
 
-.cicularprogress .card .percent .number p
+.circularprogress .card .percent .number p
 {
     font-weight: 300;
     font-size: 0.75em;
@@ -160,19 +160,19 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .cicularprogress .card {
+    .circularprogress .card {
         background: rgba(0, 0, 0, 0.0);
     }
-    .cicularprogress .card .percent svg circle {
+    .circularprogress .card .percent svg circle {
         stroke: rgba(255, 255, 255, 0.3);
     }
-    .cicularprogress .card .percent .number h2 {
+    .circularprogress .card .percent .number h2 {
         color: #fff
     }
-    .cicularprogress .card .percent .number h2 span {
+    .circularprogress .card .percent .number h2 span {
         color: #fff
     }
-    .cicularprogress .card .percent .number p {
+    .circularprogress .card .percent .number p {
         color: rgba(255, 255, 255, 0.75)
     }
 }

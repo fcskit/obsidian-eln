@@ -1,12 +1,15 @@
 ---
-ELN version: 0.4.2
-cssclass: wide-page, dashboard
+ELN version: 0.5.0
+cssclasses:
+  - wide-page
+  - dashboard
 banner: "![[obsidian-eln-banner.png]]"
 banner_y: 0.336
 date created: 2023-03-25
 author: Frieder Scheiba
 note type: list
-tag: list/lists
+tags:
+  - list/lists
 ---
 
 <div class="title" style="color:#edf">Lists</div>

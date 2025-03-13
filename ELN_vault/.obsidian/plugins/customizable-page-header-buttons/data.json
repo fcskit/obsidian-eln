@@ -23,6 +23,12 @@
       "icon": "import-glyph",
       "name": "Zotero Integration: Import Publication",
       "showButtons": "both"
+    },
+    {
+      "id": "dataview:dataview-rebuild-current-view",
+      "icon": "lucide-refresh-cw",
+      "name": "Dataview: Rebuild current view",
+      "showButtons": "both"
     }
   ],
   "desktop": true,

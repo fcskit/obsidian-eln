@@ -310,6 +310,17 @@ settings:
     letter-spacing: 8px;
 }
 
+.daily-note.markdown-source-view.is-live-preview .title {
+    font-size: 22pt !important;
+    font-weight: 900;
+    text-shadow: 2px 2px 7px #83a4b9;
+    letter-spacing: 4px;
+    background-color: #421e55;
+    padding-top: 30px;
+    padding-left: 20px;
+    height: 150px;
+}
+
 .daily-note h1,
 .daily-note div.HyperMD-header.HyperMD-header-1 {
     border-bottom-style: solid !important;

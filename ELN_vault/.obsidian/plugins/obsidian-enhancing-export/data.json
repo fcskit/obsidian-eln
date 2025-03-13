@@ -16,7 +16,8 @@
       "name": "PDF"
     },
     {
-      "name": "Word (.docx)"
+      "name": "Word (.docx)",
+      "customArguments": "--lua-filter=\"${vaultDir}/assets/Pandoc/filters/placeholders.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/pagebreak.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/ignore-code-blocks.lua\" --filter pandoc-crossref --citeproc"
     },
     {
       "name": "OpenOffice"
@@ -53,35 +54,35 @@
       "type": "pandoc",
       "arguments": "-f ${fromFormat} --resource-path=\"${currentDir}\" --resource-path=\"${currentDir}/images\" --resource-path=\"${vaultDir}/assets/Pandoc/styles\" --resource-path=\"${attachmentFolderPath}\" -s -o \"${outputPath}\" -t docx",
       "extension": ".docx",
-      "customArguments": "--reference-doc=\"${vaultDir}/assets/Pandoc/MS Word/report.docx\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/placeholders.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/pagebreak.lua\" --filter pandoc-crossref --citeproc"
+      "customArguments": "--reference-doc=\"${vaultDir}/assets/Pandoc/MS Word/report.docx\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/placeholders.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/pagebreak.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/ignore-code-blocks.lua\" --filter pandoc-crossref --citeproc"
     },
     {
       "name": "Manuscript (word, wiley)",
       "type": "pandoc",
       "arguments": "-f ${fromFormat} --resource-path=\"${currentDir}\" --resource-path=\"${currentDir}/images\" --resource-path=\"${vaultDir}/assets/Pandoc/styles\" --resource-path=\"${attachmentFolderPath}\" -s -o \"${outputPath}\" -t docx",
       "extension": ".docx",
-      "customArguments": "--reference-doc=\"${vaultDir}/assets/Pandoc/MS Word/manuscript_wiley.docx\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/placeholders.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/pagebreak.lua\" --filter pandoc-crossref --citeproc"
+      "customArguments": "--reference-doc=\"${vaultDir}/assets/Pandoc/MS Word/manuscript_wiley.docx\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/placeholders.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/pagebreak.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/ignore-code-blocks.lua\" --filter pandoc-crossref --citeproc"
     },
     {
       "name": "Manuscript (word, elsevier)",
       "type": "pandoc",
       "arguments": "-f ${fromFormat} --resource-path=\"${currentDir}\" --resource-path=\"${currentDir}/images\" --resource-path=\"${vaultDir}/assets/Pandoc/styles\" --resource-path=\"${attachmentFolderPath}\" -s -o \"${outputPath}\" -t docx",
       "extension": ".docx",
-      "customArguments": "--reference-doc=\"${vaultDir}/assets/Pandoc/MS Word/manuscript_elsevier.docx\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/placeholders.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/pagebreak.lua\" --filter pandoc-crossref --citeproc"
+      "customArguments": "--reference-doc=\"${vaultDir}/assets/Pandoc/MS Word/manuscript_elsevier.docx\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/placeholders.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/pagebreak.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/ignore-code-blocks.lua\" --filter pandoc-crossref --citeproc"
     },
     {
       "name": "Manuscript (word, rsc)",
       "type": "pandoc",
       "arguments": "-f ${fromFormat} --resource-path=\"${currentDir}\" --resource-path=\"${currentDir}/images\" --resource-path=\"${vaultDir}/assets/Pandoc/styles\" --resource-path=\"${attachmentFolderPath}\" -s -o \"${outputPath}\" -t docx",
       "extension": ".docx",
-      "customArguments": "--reference-doc=\"${vaultDir}/assets/Pandoc/MS Word/manuscript_rsc.docx\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/placeholders.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/pagebreak.lua\" --filter pandoc-crossref --citeproc"
+      "customArguments": "--reference-doc=\"${vaultDir}/assets/Pandoc/MS Word/manuscript_rsc.docx\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/placeholders.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/pagebreak.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/ignore-code-blocks.lua\" --filter pandoc-crossref --citeproc"
     },
     {
       "name": "Thesis (word)",
       "type": "pandoc",
       "arguments": "-f ${fromFormat} --resource-path=\"${currentDir}\" --resource-path=\"${currentDir}/images\" --resource-path=\"${vaultDir}/assets/Pandoc/styles\" --resource-path=\"${attachmentFolderPath}\" -s -o \"${outputPath}\" -t docx",
       "extension": ".docx",
-      "customArguments": "--reference-doc=\"${vaultDir}/assets/Pandoc/MS Word/thesis.docx\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/placeholders.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/pagebreak.lua\" --filter pandoc-crossref --citeproc"
+      "customArguments": "--reference-doc=\"${vaultDir}/assets/Pandoc/MS Word/thesis.docx\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/placeholders.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/pagebreak.lua\" --lua-filter=\"${vaultDir}/assets/Pandoc/filters/ignore-code-blocks.lua\" --filter pandoc-crossref --citeproc"
     }
   ],
   "defaultExportDirectoryMode": "Auto",
@@ -93,7 +94,7 @@
   },
   "showExportProgressBar": true,
   "version": "1.1.7",
-  "lastEditName": "Word (report)",
+  "lastEditName": "Word (.docx)",
   "lastExportDirectory": {
     "darwin": "/Users/gc9830/Documents/Temp"
   },

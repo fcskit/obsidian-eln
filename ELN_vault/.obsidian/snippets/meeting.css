@@ -1,0 +1,17 @@
+.meeting-topic {
+    background-color: var(--blockquote-background-color);
+    border-inline-start: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+    padding: 5px 10px;
+}
+
+.meeting-topic-title {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.meeting-topic-contributor {
+    font-size: 1em;
+    font-style: italic;
+    margin: 0;
+}

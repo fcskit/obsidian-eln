@@ -1,32 +1,27 @@
 ---
-ELN version: 0.4.2
-cssclass: wide-page, dashboard
+ELN version: 0.5.0
+cssclasses:
+  - wide-page
+  - dashboard
 banner: "![[obsidian-eln-banner.png]]"
 banner_y: 0.336
 date created: 2023-03-25
 author: Frieder Scheiba
 note type: dashboard
-tag: dashboard
+tags:
+  - dashboard
 ---
 
 <div class="title" style="color:#edf">HOME</div>
 
+# Project Management
 
-# Work
 - ### [[Projects]]
   ```dataview
   LIST
   FROM #project
   WHERE project.status = "active"
   ```
-
-- ### [[Lists]]
-	- [[Processes]]
-	- [[Samples]]
-	- [[Analyses]]
-	- [[Chemicals]]
-	- [[Devices]]
-	- [[Instruments]]
 
 - ### [[Meetings]]
   ```dataview
@@ -43,49 +38,6 @@ tag: dashboard
   SORT file.mtime.ts ASC
   LIMIT 6
   ``` 
-
-- ### Literature
-	 - [[Books]]
-	 - [[Publications]]
-
-- ### [[Notes]]
-  ```dataview
-  LIST
-  FROM "Notes" AND !"assets"
-  WHERE note-type != "tutorial"
-  SORT file.mtime.ts ASC
-  LIMIT 6
-  ```
-
-- ### Tutorials
-   - [[Get started with Obsidian]]
-   ```dataview
-        LIST
-        FROM "Notes"
-        WHERE note-type = "tutorial"
-        SORT file.mtime.ts ASC
-        LIMIT 4
-   ``` 
-
-- ### Miscellaneous
-	 - [[Electrochemical Glossary]]
-	 - [[Conferences]]
-
-
-# Recently Edited
-- 
-  ```dataviewjs
-    dv.list(dv.pages('').sort(f=>f.file.mtime.ts,"desc").slice(0, 5).file.link)
-   ```
-- 
-  ```dataviewjs
-    dv.list(dv.pages('').sort(f=>f.file.mtime.ts,"desc").slice(5, 10).file.link)
-   ```
-- 
-  ```dataviewjs
-    dv.list(dv.pages('').sort(f=>f.file.mtime.ts,"desc").slice(10, 15).file.link)
-   ```
-
 
 # Open Tasks
 
@@ -124,6 +76,115 @@ if (remaining_notes == 1) {
     dv.taskList(querry.where(q => { return q.path === note_list[index + 0] || q.path === note_list[index + 1] } ))
 }
 ```
+
+# Experiments
+
+- ### [[Processes]]
+  ```dataview
+  LIST
+  FROM #process
+  SORT file.mtime.ts ASC
+  LIMIT 6
+  ```
+
+- ### [[Samples]]
+  ```dataview
+  LIST
+  FROM #sample
+  SORT file.mtime.ts ASC
+  LIMIT 6
+  ```
+
+- ### [[Analyses]]
+  ```dataview
+  LIST
+  FROM #analysis 
+  SORT file.mtime.ts ASC
+  LIMIT 6
+  ```
+
+# Resources
+
+- ### [[Chemicals]]
+  ```dataview
+  LIST
+  FROM #chemical
+  SORT file.mtime.ts ASC
+  LIMIT 6
+  ```
+
+- ### [[Devices]]
+  ```dataview
+  LIST
+  FROM #device 
+  SORT file.mtime.ts ASC
+  LIMIT 6
+  ```
+
+- ### [[Instruments]]
+  ```dataview
+  LIST
+  FROM #analysis 
+  SORT file.mtime.ts ASC
+  LIMIT 6
+  ```
+
+# Quick Links
+
+- ### [[Lists]]
+	- [[Processes]]
+	- [[Samples]]
+	- [[Analyses]]
+	- [[Chemicals]]
+	- [[Devices]]
+	- [[Instruments]]
+
+- ### Literature
+	 - [[Books]]
+	 - [[Publications]]
+
+- ### [[Notes]]
+  ```dataview
+  LIST
+  FROM "Notes" AND !"assets"
+  WHERE note-type != "tutorial"
+  SORT file.mtime.ts ASC
+  LIMIT 6
+  ```
+
+- ### Tutorials
+   - [[Obsidian ELN - Getting started]]
+   ```dataview
+        LIST
+        FROM "Notes"
+        WHERE note-type = "tutorial"
+        SORT file.mtime.ts ASC
+        LIMIT 4
+   ``` 
+
+- ### Miscellaneous
+	 - [[Electrochemical Glossary]]
+	 - [[Conferences]]
+
+
+# Recently Edited
+
+- 
+  ```dataviewjs
+    dv.list(dv.pages('').sort(f=>f.file.mtime.ts,"desc").slice(0, 5).file.link)
+   ```
+
+- 
+  ```dataviewjs
+    dv.list(dv.pages('').sort(f=>f.file.mtime.ts,"desc").slice(5, 10).file.link)
+   ```
+
+- 
+  ```dataviewjs
+    dv.list(dv.pages('').sort(f=>f.file.mtime.ts,"desc").slice(10, 15).file.link)
+   ```
+
+
 
 # Vault Info
 

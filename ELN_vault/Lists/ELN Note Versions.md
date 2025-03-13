@@ -1,10 +1,12 @@
 ---
-ELN version: 0.3.2
-cssclass: wide-page
+ELN version: 0.5.0
+cssclasses:
+  - wide-page
 date created: 2023-05-14
 author: Frieder Scheiba
 note type: ELN-versions-list
-tag: list
+tags:
+  - list
 ---
 
 ```dataviewjs
@@ -17,18 +19,17 @@ await dv.view("/assets/javascript/dataview/views/note_header", {});
 
 ## Notes
 
-The following table shows the ELN version, author, and modification date of the template on which the notes in your vault are based.
+The following table shows the ELN version, author, note type and modification date of the notes in your vault.
 
 ```dataview
 TABLE WITHOUT ID
   file.link as Note, 
-  eln-info.template as Template,
-  eln-info.version as "Templ. Version",
-  eln-info.author as "Templ. Author",
+  eln-version as "ELN Version",
+  author as "Author",
   note-type as " Note Type",
   dateformat(file.mtime, "yyyy-MM-dd") as "last modified"
-WHERE eln-info.version
-SORT eln-info.version, DESC, eln-info.template ASC
+WHERE eln-version
+SORT eln-version, DESC
 ```
 
 #### Notes without ELN Information
@@ -39,8 +40,8 @@ TABLE WITHOUT ID
   note-type as "Note Type",
   file.mtime as modified,
   file.ctime as created 
-FROM !"assets" AND !"Notes"
-WHERE !eln-info.version
+FROM !"assets"
+WHERE !eln-version
 SORT note-type, file.ctime DESC
 ```
 

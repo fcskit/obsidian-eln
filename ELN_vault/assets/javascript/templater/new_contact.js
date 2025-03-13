@@ -1,3 +1,23 @@
+function get_property() {
+  if (arguments.length >= 2) {
+    var obj = arguments[0];
+    const keys = Array.from(arguments).slice(1);
+    for (var i in keys) {
+      if (obj.hasOwnProperty(keys[i])) {
+        obj = obj[keys[i]];
+      } else {
+        console.log(`Property "${keys[i]}" not found in object.`);
+        return null;
+      }
+    }
+    return obj;
+  }
+  else {
+    console.log('Function get_property requires at least two arguments.');
+    return null;
+  }
+}
+
 async function new_contact(tp, return_type, out_folder) {
   const path = require('path');
 
@@ -18,13 +38,7 @@ async function new_contact(tp, return_type, out_folder) {
     console.log(`folder.contacts not found in ELN settings. Using default folder "${folder_contacts}"`);
   }
   /**********************************************************************************/
-  var author = '';
-  try {
-    author = eln_settings.note.author;
-  }
-  catch (error) {
-    console.log(`note.author not found in ELN settings.`);
-  }
+  const author = await tp.user.get_author(tp);
   // get current date and format it to ISO 8601
   const date = new Date();
   const date_created = date.toISOString().split('T')[0];
@@ -46,25 +60,25 @@ author: ${author}
 note type: contact
 tag: contact
 name:
-  title:
+  title: ~~
   given name: ${given_name}
   family name: ${family_name}
 contact:
   work:
     email: name@domain.edu
-    phone: +49 721 608 xxxx
-    mobile: 
-    fax:
+    phone: +49 xxx xxx xxxx
+    mobile: +49 xxx xxx xxxx
+    fax: +49 xxx xxx xxxx
 address:
   work:
-    affiliation: Karlsruher Institut für Technologie (KIT)
-    division: Institut für Angewandte Materialien (IAM-ESS)
-    street: Hermann-von-Helmholtz-Platz 1
+    affiliation: ~~
+    division: ~~
+    street: ~~
     building: ~~
     room: ~~
-    city: Eggenstein-Leopoldshafen
-    zip code: 76344
-    country: Germany
+    city: ~~
+    zip code: ~~
+    country: ~~
 job position: ~~
 group: ~~
 ---
@@ -78,7 +92,7 @@ await dv.view("/assets/javascript/dataview/views/note_header", {});
 \`\`\`
 
 \`\`\`dataviewjs
-await dv.view("/assets/javascript/dataview/views/contact", {});
+await dv.view("/assets/javascript/dataview/views/contact", {obsidian: obsidian});
 \`\`\`
 
 \`\`\`dataviewjs

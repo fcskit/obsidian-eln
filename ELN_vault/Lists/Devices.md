@@ -1,10 +1,12 @@
 ---
-ELN version: 0.3.2
-cssclass: wide-page
+ELN version: 0.5.0
+cssclasses:
+  - wide-page
 date created: 2024-07-17
 author: Frieder Scheiba
 note type: device-list
-tag: list/devices
+tags:
+  - list/devices
 ---
 
 ```dataviewjs
@@ -28,7 +30,7 @@ TABLE WITHOUT ID
   file.link as Device, 
   device.manufacturer as Manufacturer,
   device.model as Model,
-  device.methods as "Methods",
+  device.type as "Type",
   device.contact as "Contact", 
   device.location.building as Building, 
   device.location.room as Room

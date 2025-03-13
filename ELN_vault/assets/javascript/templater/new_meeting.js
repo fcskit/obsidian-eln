@@ -26,13 +26,7 @@ async function new_meeting(tp, return_type, out_folder) {
     console.log(`folder.processes not found in ELN settings. Using default folder "Meetings"`);
   }
   /**********************************************************************************/
-  var author = '';
-  try {
-    author = eln_settings.note.author;
-  }
-  catch (error) {
-    console.log(`note.author not found in ELN settings.`);
-  }
+  const author = await tp.user.get_author(tp);
   // get current date and format it to ISO 8601
   const date = new Date();
   const date_created = date.toISOString().split('T')[0];
@@ -74,13 +68,13 @@ meeting:
    topics:
      - time: ${starting_time}
        title: 1st Topic
-       contributor:
+       contributor: ""
      - time: ${addMinutes(starting_time, 15)}
        title: 2nd Topic
-       contributor:
+       contributor: ""
      - time: ${addMinutes(starting_time, 30)}
        title: 3rd Topic
-       contributor:
+       contributor: ""
 project:
    name: ~~
 ---
@@ -96,81 +90,69 @@ await dv.view("/assets/javascript/dataview/views/note_header", {});
 ## Meeting Info
 
 \`\`\`dataviewjs
-await dv.view("/assets/javascript/dataview/views/meeting", {key: 'meeting', exclude: ['topics']});
+await dv.view("/assets/javascript/dataview/views/meeting", {obsidian: obsidian});
 \`\`\`
 
 
 ## Agenda & Minutes
 
 \`\`\`dataviewjs
-var utils = require(app.vault.adapter.basePath + "/assets/javascript/dataview/dv_utils.js");
-utils.dv_frontmatter_meeting_topic(dv, 0);
+await dv.view("/assets/javascript/dataview/views/meeting_topics", {  });
 \`\`\`
 
 
 \`\`\`dataviewjs
-var utils = require(app.vault.adapter.basePath + "/assets/javascript/dataview/dv_utils.js");
-utils.dv_frontmatter_meeting_topic(dv, 1);
+await dv.view("/assets/javascript/dataview/views/meeting_topics", {  });
 \`\`\`
 
 
 \`\`\`dataviewjs
-var utils = require(app.vault.adapter.basePath + "/assets/javascript/dataview/dv_utils.js");
-utils.dv_frontmatter_meeting_topic(dv, 2);
+await dv.view("/assets/javascript/dataview/views/meeting_topics", {  });
 \`\`\`
 
 
 \`\`\`dataviewjs
-var utils = require(app.vault.adapter.basePath + "/assets/javascript/dataview/dv_utils.js");
-utils.dv_frontmatter_meeting_topic(dv, 3);
+await dv.view("/assets/javascript/dataview/views/meeting_topics", {  });
 \`\`\`
 
 
 \`\`\`dataviewjs
-var utils = require(app.vault.adapter.basePath + "/assets/javascript/dataview/dv_utils.js");
-utils.dv_frontmatter_meeting_topic(dv, 4);
+await dv.view("/assets/javascript/dataview/views/meeting_topics", {  });
 \`\`\`
 
 
 \`\`\`dataviewjs
-var utils = require(app.vault.adapter.basePath + "/assets/javascript/dataview/dv_utils.js");
-utils.dv_frontmatter_meeting_topic(dv, 5);
+await dv.view("/assets/javascript/dataview/views/meeting_topics", {  });
 \`\`\`
 
 
 \`\`\`dataviewjs
-var utils = require(app.vault.adapter.basePath + "/assets/javascript/dataview/dv_utils.js");
-utils.dv_frontmatter_meeting_topic(dv, 6);
+await dv.view("/assets/javascript/dataview/views/meeting_topics", {  });
 \`\`\`
 
 
 \`\`\`dataviewjs
-var utils = require(app.vault.adapter.basePath + "/assets/javascript/dataview/dv_utils.js");
-utils.dv_frontmatter_meeting_topic(dv, 7);
+await dv.view("/assets/javascript/dataview/views/meeting_topics", {  });
 \`\`\`
 
 
 \`\`\`dataviewjs
-var utils = require(app.vault.adapter.basePath + "/assets/javascript/dataview/dv_utils.js");
-utils.dv_frontmatter_meeting_topic(dv, 8);
+await dv.view("/assets/javascript/dataview/views/meeting_topics", {  });
 \`\`\`
 
 
 \`\`\`dataviewjs
-var utils = require(app.vault.adapter.basePath + "/assets/javascript/dataview/dv_utils.js");
-utils.dv_frontmatter_meeting_topic(dv, 9);
+await dv.view("/assets/javascript/dataview/views/meeting_topics", {  });
 \`\`\`
 
 
 \`\`\`dataviewjs
-var utils = require(app.vault.adapter.basePath + "/assets/javascript/dataview/dv_utils.js");
-utils.dv_frontmatter_meeting_topic(dv, 10);
+await dv.view("/assets/javascript/dataview/views/meeting_topics", {  });
 \`\`\`
 
 
 \`\`\`dataviewjs
-var utils = require(app.vault.adapter.basePath + "/assets/javascript/dataview/dv_utils.js");
-utils.dv_frontmatter_meeting_topic(dv, 11);
+await dv.view("/assets/javascript/dataview/views/meeting_topics", {  });
 \`\`\`
 
 

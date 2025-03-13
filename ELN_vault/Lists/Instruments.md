@@ -1,10 +1,12 @@
 ---
-ELN version: 0.3.2
-cssclass: wide-page
+ELN version: 0.5.0
+cssclasses:
+  - wide-page
 date created: 2023-03-07
 author: Frieder Scheiba
 note type: instrument-list
-tag: list/instruments
+tags:
+  - list/instruments
 ---
 
 ```dataviewjs

@@ -32,13 +32,7 @@ async function new_sample_list(tp, project_name=null, show=false) {
 
     project_name = await tp.system.suggester(project_list, project_list, false, 'Select project:')
   }
-  var author = '';
-  try {
-    author = eln_settings.note.author;
-  }
-  catch (error) {
-    console.log(`note.author not found in ELN settings.`);
-  }
+  const author = await tp.user.get_author(tp);
 
   // get current date and format it to ISO 8601
   const date = new Date();

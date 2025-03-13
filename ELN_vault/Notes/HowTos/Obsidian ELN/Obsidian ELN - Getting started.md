@@ -1,11 +1,14 @@
 ---
-ELN info:
-  template: Dashboard - Template
-  version: 0.3.2
-  author: Frieder Scheiba
-  modified: 2023-06-01
-  copyright: GNU Affero General Public License v3.0
-cssclass: strong-accent, accent-heading
+ELN version: 0.5.0
+cssclass: 
+  - note
+  - strong-accent
+  - accent-heading
+date-created: 2023-06-01
+author: Frieder Scheiba
+note type: how-to
+tags:
+  - " #note/how-to  "
 ---
 
 ```dataviewjs
@@ -23,7 +26,7 @@ await dv.view("/assets/javascript/dataview/views/note_header", {});
 >   - [[#Step 7 ELN List Views]]
 >   - [[#Step 8 Change the look of Obsidian and your notes]]
 >   - [[#Step 9 Working with Literature Notes]]
->   - [[#Step 10 Presenting your notes]]
+
 
 ## Step 1: Familiarize yourself with Obsidian
 
@@ -223,11 +226,6 @@ Import literature notes from Zotero:
 5. After having a successfully imported the publication you can find the corresponding literature note in the folder `Literature/Publications`
  
 A more detailed tutorial for using Zotero Integration will be added later. For the time being please refer to the [official plugin documentation](https://github.com/mgmeyers/obsidian-zotero-integration).
-
-## Step 10: Presenting your notes
-
-Advanced Slides Plugin
-
 
 ```dataviewjs
 await dv.view("/assets/javascript/dataview/views/note_footer", {});

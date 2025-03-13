@@ -38,7 +38,7 @@ await dv.view("/assets/javascript/dataview/views/note_header", {});
 ```
 
 ```dataviewjs
-await dv.view("/assets/javascript/dataview/views/contact", {});
+await dv.view("/assets/javascript/dataview/views/contact", {obsidian: obsidian});
 ```
 
 ```dataviewjs

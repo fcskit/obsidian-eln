@@ -1,10 +1,12 @@
 ---
-ELN version: 0.3.2
-cssclass: wide-page
+ELN version: 0.5.0
+cssclasses:
+  - wide-page
 date created: 2023-02-28
 author: Felix Bauer
 note type: chemical-list
-tag: list/chemicals
+tags:
+  - list/chemicals
 ---
 
 ```dataviewjs

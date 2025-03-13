@@ -1,11 +1,18 @@
 if (input && dv) {
-  const chem_link_container = dv.el("div", "", { cls: "chem-link-container" });
+  const container = dv.container;
+  const chem_link_container = container.createDiv({ cls: 'chem-link-container' });
   // compose html for chem links
-  const frontmatter = dv.current().file.frontmatter;
-  const cas_number = (frontmatter.chemical.CAS) ? frontmatter.chemical.CAS : '';
+  const currentFile = dv.current().file;
+  const fileCache = app.metadataCache.getFileCache(currentFile);
+  const frontmatter = fileCache.frontmatter;
+  let cas_number = (frontmatter.chemical.CAS) ? frontmatter.chemical.CAS : '';
+  if (typeof cas_number !== 'string') {
+    // convert cas_number to string
+    cas_number = cas_number.toString();
+  }
   const cas_is_valid = cas_number.match(/^\d{2,7}-\d{2}-\d$/);
   if (cas_is_valid) {
-    const chem_links_html = `<h4>Web Links</h4>
+    const chem_links_html = `<h4>Chem Links</h4>
     <ul>
       <li><a href="https://www.sigmaaldrich.com/DE/de/search/${cas_number}?focus=products&page=1&perpage=30&sort=relevance&term=${cas_number}&type=product">Sigma-Aldrich</a></li>
       <li><a href="https://de.vwr.com/store/product?casNum=${cas_number}">VWR (Germany)</a></li>
@@ -18,15 +25,13 @@ if (input && dv) {
       <li><a href="https://en.wikipedia.org/w/index.php?search=cas+${cas_number}">Wikipedia</a></li>
     </ul>`;
     chem_link_container.insertAdjacentHTML("beforeend", chem_links_html);
+  } else {
+    const chem_links_html = `<h4>Chem Links</h4>
+    <p>Chem Links provide a convenient way to search chemical databases from Sigma-Aldrich, VWR,
+    ThermoFisher Scientific, ChemicalBook, ChemSpider, PubChem, abcr, Google, and Wikipedia based on the CAS number of the substance.</p>
+    <p>This information is displayed, because either the CAS number is not available or the CAS number is not in the correct format.</p>
+    <p>To view the Chem-Links enter a valid CAS number in the metadata section with following format: 12345-67-8</p>`;
+    chem_link_container.insertAdjacentHTML("beforeend", chem_links_html);
   }
-
-  // const inst_responsibility = dv.pages('#instrument').where(p => p.instrument.contact.toString().includes(dv.current().file.name)).file.link;
-  // const further_info_html = `<h4>Further Information</h4>
-  // <p><strong>Position</strong> ${frontmatter['job position']}</p>
-  // <p>Device responsibility</p>
-  // <p>Instrument responsibility</p>
-  // ${inst_responsibility}
-  // <p>Lab responsibility</p>`;
-  // properties.insertAdjacentHTML("beforeend", further_info_html);
 }
 
